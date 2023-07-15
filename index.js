@@ -1,20 +1,17 @@
 const express = require('express');
-const matrix = require('./public/ressources/js/matrix');
+const path = require('path');
 const PORT = 3000;
-
 const app = express();
+
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
-
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-    res.render()
+    res.render('index')
   });
 
-
-
 app.listen(PORT, () => {
-    console.log(`Game center web server is running on http://localhost:${PORT}`);
+    console.log(`Bienvenue dans la matrice à l'adresse http://localhost:${PORT}`);
   })

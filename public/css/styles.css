@@ -3,7 +3,7 @@
 }
 
 html {
-  background: black;
+  background-color: black;
   height: 100%;
   overflow: hidden;
 }
@@ -30,7 +30,7 @@ h1 {
   font-family: 'Comfortaa', cursive;
   font-size: 10rem;
   color: azure;
-  padding: 0;
+  padding: 1rem;
   width: 100%;
 }
 
@@ -107,7 +107,7 @@ button {
   cursor: pointer;
   position: absolute;
   top : 25rem;
-  left : 55rem;
+  left : 50rem;
   z-index: 0;
   border: none;
   outline: none;
@@ -166,6 +166,6 @@ footer {
   font-size: 1rem;
   position: absolute;
   width: 100%;
-  top: 75rem;
-  left:65rem;
+  top: 68rem;
+  left:58rem;
 }
