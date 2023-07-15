@@ -132,7 +132,7 @@ button:before {
 }
 
 button:active {
-  color: #000
+  color: #ffffff
 }
 
 button:active:after {
@@ -167,5 +167,5 @@ footer {
   position: absolute;
   width: 100%;
   top: 68rem;
-  left:58rem;
+  left:57rem;
 }
