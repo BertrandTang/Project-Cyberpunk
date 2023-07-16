@@ -1,0 +1,65 @@
+
+
+h1{
+    margin: 1.5rem 0rem 0rem 3rem;
+    font-size: 3rem;
+}
+
+.window {
+    width: 120rem;
+    height: 60rem;
+    background-color: #c0c0c0;
+    border: 2px solid #000;
+    position: relative;
+    margin: 1.5rem auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.window-title-bar {
+    background-color: #000;
+    height: 30px;
+    color: #fff;
+    padding: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    position: relative;
+}
+
+.window-title {
+    float: left;
+}
+
+.window-buttons {
+    float: right;
+}
+
+.window-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.window-content {
+    padding: 10px;
+}
+
+/* Styles pour les boutons de la barre de titre */
+
+.window-button.close {
+    background-color: #ff5f57;
+}
+
+.window-button.minimize {
+    background-color: #ffbd2e;
+}
+
+.window-button.maximize {
+    background-color: #28c940;
+}
+
+footer{
+    text-align: center;
+}
