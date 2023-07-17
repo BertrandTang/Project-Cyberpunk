@@ -1,23 +1,50 @@
 
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    background-color: black;
+    height: 100%;
+    overflow: hidden;
+  }
 
 h1{
-    margin: 1.5rem 0rem 0rem 3rem;
-    font-size: 3rem;
+    color: white;
+    margin: 0.5rem 0rem 0rem 3rem;
+    font-size: 2rem;
 }
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    text-align: center;
+    width: auto;
+    top: 2rem;
+  }
+
+  #window__outer {
+    display: flex;
+    position: absolute;
+    width: auto;
+    top: 3rem;
+    left: 10rem;
+  }
 
 .window {
     width: 120rem;
     height: 60rem;
-    background-color: #c0c0c0;
-    border: 2px solid #000;
+    background-color: #3a383a;
+    border: 2px solid #2c7806;
     position: relative;
     margin: 1.5rem auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .window-title-bar {
-    background-color: #000;
-    height: 30px;
+    background-color: #8c1065;
+    height: 2.5rem;
     color: #fff;
     padding: 5px;
     font-family: Arial, sans-serif;
@@ -26,20 +53,23 @@ h1{
 }
 
 .window-title {
+    font-size: 1rem;
+    margin: 0.5rem;
     float: left;
 }
 
 .window-buttons {
+    margin: 0.5rem;
     float: right;
 }
 
 .window-button {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #fff;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50px;
     margin-left: 5px;
     display: inline-block;
+    cursor: pointer;
 }
 
 .window-content {
@@ -60,6 +90,11 @@ h1{
     background-color: #28c940;
 }
 
-footer{
-    text-align: center;
-}
+footer {
+    color: white;
+    font-size: 1rem;
+    position: absolute;
+    width: 100%;
+    top: 68rem;
+    left:57rem;
+  }

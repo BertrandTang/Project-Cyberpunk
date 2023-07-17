@@ -6,32 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" type="text/css" href="/css/profile.css">
+    
     <title>Profile</title>
 </head>
-
 <body>
-    <h1> OS.X.2050 </h1>
-    <main id="interface">
-
-        <div class="window">
-            <div class="window-title-bar">
-                <div class="window-title">Ma fenêtre</div>
-                <div class="window-buttons">
-                    <button class="window-button close"></button>
-                    <button class="window-button minimize"></button>
-                    <button class="window-button maximize"></button>
+    <section id="container">
+        <h1> OS.X.2050 </h1>
+        <section id="window__outer">
+            <main id="interface">
+                <div class="window">
+                    <div class="window-title-bar">
+                        <div class="window-title">Welcome to my code</div>
+                        <div class="window-buttons">
+                            <button class="window-button close"></button>
+                            <button class="window-button minimize"></button>
+                            <button class="window-button maximize"></button>
+                        </div>
+                    </div>
+                    <div class="window-content">
+                        <!-- Contenu de la fenêtre -->
+                    </div>
                 </div>
-            </div>
-
-            <div class="window-content">
-                <!-- Contenu de la fenêtre -->
-            </div>
-
-        </div>
+            </section>
+        </section>
     </main>
 </body>
 
 </html>
-
-
+<%- include ('partials/matrix') %>
 <%- include ('partials/footer') %>
