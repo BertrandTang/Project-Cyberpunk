@@ -7,12 +7,14 @@
     background-color: black;
     height: 100%;
     overflow: hidden;
+    font-family: 'Oswald', sans-serif;
   }
 
 h1{
     color: white;
-    margin: 0.5rem 0rem 0rem 3rem;
-    font-size: 2rem;
+    margin: 0.25rem 0rem 0rem 3rem;
+    font-size: 3rem;
+    letter-spacing: 1rem;
 }
 
 #container {
@@ -36,40 +38,47 @@ h1{
     width: 120rem;
     height: 60rem;
     background-color: #3a383a;
-    border: 2px solid #2c7806;
+    border: 2px solid #000000;
     position: relative;
     margin: 1.5rem auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .window-title-bar {
-    background-color: #8c1065;
+    background-color: rgba(19, 107, 6, 0.8);
     height: 2.5rem;
     color: #fff;
     padding: 5px;
     font-family: Arial, sans-serif;
     font-size: 12px;
     position: relative;
+    overflow: hidden;
 }
 
 .window-title {
     font-size: 1rem;
-    margin: 0.5rem;
+    margin: 0.35rem;
+    font-family: 'Oswald', sans-serif;
     float: left;
 }
 
 .window-buttons {
-    margin: 0.5rem;
+    margin: 0.20rem;
     float: right;
+    
 }
 
 .window-button {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50px;
-    margin-left: 5px;
-    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100px;
+    margin-left: 1rem;
+    border: 0.5px solid rgb(42, 42, 42);
     cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    transition: 90ms;
 }
 
 .window-content {
@@ -79,15 +88,28 @@ h1{
 /* Styles pour les boutons de la barre de titre */
 
 .window-button.close {
-    background-color: #ff5f57;
+    background-color: #dc3d34;
+}
+
+.window-button.close:hover{
+    background-color: #ff6868;
+
 }
 
 .window-button.minimize {
-    background-color: #ffbd2e;
+    background-color: #d0930e;
+}
+
+.window-button.minimize:hover{
+    background-color:  #f6bf48;
 }
 
 .window-button.maximize {
     background-color: #28c940;
+}
+
+.window-button.maximize:hover{
+    background-color: #0dff00;
 }
 
 footer {

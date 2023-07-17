@@ -39,5 +39,5 @@
       }
     };
 
-    setInterval(draw, 20);
+    setInterval(draw, 15);
   
