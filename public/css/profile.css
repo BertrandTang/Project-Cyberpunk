@@ -82,7 +82,10 @@ h1{
 }
 
 .window-content {
-    padding: 10px;
+    text-align: center;
+    font-size: 10rem;
+    padding: 20rem 0;
+    color:#0dff00;
 }
 
 /* Styles pour les boutons de la barre de titre */

@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+
 * {
   box-sizing: border-box;
 }
@@ -61,7 +65,7 @@ h2 {
   font-family: 'Comfortaa', cursive;
   font-weight: lighter;
   font-size: 5rem;
-  margin:3rem;
+  margin:3rem 1rem;
   color: azure;
   width: 100%;
 }
@@ -99,15 +103,16 @@ span {
 button {
   font-size: 4rem;
   color: rgb(4, 250, 0);
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Oswald', cursive;
   background-color: black;
-  margin-right: 5rem;
+  margin-right: 2rem;
   padding: 2rem 5rem;
   border-radius: 60px 0px 60px 0px;
   cursor: pointer;
   position: absolute;
+  letter-spacing: 0.5rem;
   top : 25rem;
-  left : 50rem;
+  left : 51.5rem;
   z-index: 0;
   border: none;
   outline: none;
@@ -169,3 +174,9 @@ footer {
   top: 68rem;
   left:57rem;
 }
+
+/* @media screen and (min-width:320px) and (max-width:479px){}
+@media screen and (min-width:480px) and (max-width:767px){}
+@media screen and (min-width:768px) and (max-width:1023px){}
+@media screen and (min-width:1024px) and (max-width:1279px){}
+@media screen and (min-width:1280px) and (max-width:1440px){} */
