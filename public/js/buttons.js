@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     const button = document.querySelector('.minimize');
-    const audio = new Audio("https://www.myinstants.com/en/instant/fart/?utm_source=copy&utm_medium=share")
+    const audio = new Audio("../mp3/dry-fart.mp3")
     button.addEventListener('click', function() {
-
-        confirm(`💨 ... Mais t'as pété ? 👀`);
         audio.play();
+        confirm(`💨 ... Mais t'as pété ? 👀`);
+        
     });
 });
