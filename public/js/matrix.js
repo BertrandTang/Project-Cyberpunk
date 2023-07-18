@@ -40,7 +40,7 @@
         rainDrops[i]++;
 
     // La couleur des caractères, ici on assigne des couleurs aléatoire parce qu'on est gays
-        const color = `hsl(${Math.random() * 360}, 80%, 40%)`;
+        const color = `hsl(${Math.random() * 360}, 90%, 40%)`;
         context.fillStyle = color;
       }
     };
