@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 
-
 * {
   box-sizing: border-box;
 }
-
+#Matrix {
+  position: relative;
+  z-index: -1;
+}
 html {
   background-color: black;
+  width: 100%;
   height: 100%;
   overflow: hidden;
 }
@@ -17,23 +20,24 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
+  background-color: transparent;
 }
 
 section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  justify-items: center;
-  align-items: center;
   position: absolute;
   width: auto;
-  top: 12rem;
+  top: 30%;
+  transform: translateY(-50%);
 }
 
 h1 {
   font-family: 'Comfortaa', cursive;
+  font-weight: bolder;
   font-size: 10rem;
-  color: azure;
+  color: rgb(0, 0, 0);
   padding: 1rem;
   width: 100%;
 }
@@ -42,7 +46,7 @@ h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid rgb(4, 250, 0); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 1rem; /* Gives that scrolling effect as the typing happens */
+  margin: 0rem; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
     typing 1s steps(40, end),
@@ -63,10 +67,11 @@ h1 {
 
 h2 {
   font-family: 'Comfortaa', cursive;
-  font-weight: lighter;
+  font-weight: bolder;
   font-size: 5rem;
-  margin:3rem 1rem;
-  color: azure;
+  padding: 4rem 1rem;
+  margin:4rem;
+  color: rgb(0, 0, 0);
   width: 100%;
 }
 
@@ -74,7 +79,7 @@ h2 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid rgb(4, 250, 0); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 rem; /* Gives that scrolling effect as the typing happens */
+  margin: 0rem; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
     typing 1s steps(40, end),
@@ -94,26 +99,34 @@ h2 {
 }
 
 span {
-
-  font-weight:900;
+  font-size: 8rem;
+  font-weight:bolder;
   color: rgb(4, 250, 0);
 
+}
+.container{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+}
+
+.container__button{
+  display: inline-block;
+  border-radius: 60px 0px 60px 0px;
+  width: fit-content;
+  position: relative;
 }
 
 button {
   font-size: 4rem;
   color: rgb(4, 250, 0);
-  font-family: 'Oswald', cursive;
-  background-color: black;
-  margin-right: 2rem;
-  padding: 2rem 5rem;
-  border-radius: 60px 0px 60px 0px;
+  font-family: 'Oswald', sans-serif;
+  padding: 2rem 3rem;
   cursor: pointer;
-  position: absolute;
+  background-color: whitesmoke;
+  border-radius: 60px 0px 60px 0px;
   letter-spacing: 0.5rem;
-  top : 25rem;
-  left : 51.5rem;
-  z-index: 0;
   border: none;
   outline: none;
   transition: 90ms;
@@ -137,7 +150,8 @@ button:before {
 }
 
 button:active {
-  color: #ffffff
+  color: #ffffff;
+  background: transparent;
 }
 
 button:active:after {
@@ -170,9 +184,10 @@ footer {
   color: white;
   font-size: 1rem;
   position: absolute;
-  width: 100%;
-  top: 68rem;
-  left:57rem;
+  top:95%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
 }
 
 /* @media screen and (min-width:320px) and (max-width:479px){}

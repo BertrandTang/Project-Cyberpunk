@@ -1,47 +1,50 @@
-
 * {
     box-sizing: border-box;
-  }
-  
-  html {
+}
+
+html {
     background-color: black;
     height: 100%;
     overflow: hidden;
     font-family: 'Oswald', sans-serif;
-  }
-
-h1{
-    color: white;
-    margin: 0.25rem 0rem 0rem 3rem;
-    font-size: 3rem;
-    letter-spacing: 1rem;
 }
 
-#container {
+h1 {
+    color: white;
+    font-size: 5rem;
+    letter-spacing: 1rem;
+    position: absolute;
+    top: 3%;
+    left: 5%;
+}
+
+h2 {
+    color: white;
+    font-size: 3rem;
+}
+
+h3 {
+    color: white;
+    font-size: 3rem;
+}
+
+
+#window__outer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    text-align: center;
-    width: auto;
-    top: 2rem;
-  }
-
-  #window__outer {
-    display: flex;
-    position: absolute;
-    width: auto;
-    top: 3rem;
-    left: 10rem;
-  }
+    height: 100%;
+    width: 100%;
+}
 
 .window {
-    width: 120rem;
-    height: 60rem;
+    width: 80%;
+    height: 75%;
     background-color: #3a383a;
     border: 2px solid #000000;
     position: relative;
-    margin: 1.5rem auto;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .window-title-bar {
@@ -49,8 +52,6 @@ h1{
     height: 2.5rem;
     color: #fff;
     padding: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 12px;
     position: relative;
     overflow: hidden;
 }
@@ -59,13 +60,14 @@ h1{
     font-size: 1rem;
     margin: 0.35rem;
     font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.3rem;
     float: left;
 }
 
 .window-buttons {
     margin: 0.20rem;
     float: right;
-    
+
 }
 
 .window-button {
@@ -82,10 +84,22 @@ h1{
 }
 
 .window-content {
-    text-align: center;
-    font-size: 10rem;
-    padding: 20rem 0;
-    color:#0dff00;
+    text-align: left;
+    color: #ffffff;
+    font-size: 5rem;
+    padding: 5rem;
+}
+
+#hello {
+    margin-bottom: 3rem;
+}
+
+span {
+    color: #0dff00;
+}
+
+em {
+    color: #0dff00;
 }
 
 /* Styles pour les boutons de la barre de titre */
@@ -94,7 +108,7 @@ h1{
     background-color: #dc3d34;
 }
 
-.window-button.close:hover{
+.window-button.close:hover {
     background-color: #ff6868;
 
 }
@@ -103,15 +117,15 @@ h1{
     background-color: #d0930e;
 }
 
-.window-button.minimize:hover{
-    background-color:  #f6bf48;
+.window-button.minimize:hover {
+    background-color: #f6bf48;
 }
 
 .window-button.maximize {
     background-color: #28c940;
 }
 
-.window-button.maximize:hover{
+.window-button.maximize:hover {
     background-color: #0dff00;
 }
 
@@ -119,7 +133,8 @@ footer {
     color: white;
     font-size: 1rem;
     position: absolute;
-    width: 100%;
-    top: 68rem;
-    left:57rem;
-  }
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+}
