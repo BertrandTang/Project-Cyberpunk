@@ -99,11 +99,19 @@ h2 {
 }
 
 span {
-  font-size: 8rem;
+  font-size: 6rem;
   font-weight:bolder;
   color: rgb(4, 250, 0);
 
 }
+
+em {
+  font-size: 12rem;
+  font-weight:bolder;
+  color: rgb(4, 250, 0);
+
+}
+
 .container{
   position: absolute;
   left: 50%;
@@ -181,7 +189,7 @@ button:after {
 }
 
 footer {
-  color: white;
+  color: black;
   font-size: 1rem;
   position: absolute;
   top:95%;
