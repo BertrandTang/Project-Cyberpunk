@@ -4,16 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="/css/profile.css" />
+    <link rel="stylesheet" type="text/css" href="/css/skills.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"  />
-
-    <title>Profile</title>
+      rel="stylesheet"/>
+    <title>Skills</title>
   </head>
 
   <body>
@@ -22,7 +21,7 @@
       <section id="window__outer">
         <section class="window">
           <div class="window-title-bar">
-            <h2 class="window-title">Welcome to my introduction 👋</h2>
+            <h2 class="window-title">My Skills</h2>
             <div class="window-buttons">
               <a
                 href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
@@ -34,7 +33,7 @@
             </div>
           </div>
           <section class="window-content">
-            <p id="hello">Hello World !</p>
+            <p id="hello">Voici les technologies que j'ai abordé pendant ma formation à l'École O'clock</p>
             <p id="message">
               Je m'appelle <em>Bertrand Tang</em>, je suis un
               padawan sur la voie du <em>Développeur Web Fullstack</em> depuis
@@ -51,15 +50,14 @@
             </p>
           <ul id="buttons_section">
             <li><button id="Contact" class="buttons__profile" onclick="window.open('#', '_blank')""><span>Contact</span></button></li>
-            <li><button id="Linkedin" class="buttons__profile" onclick="window.open('https://www.linkedin.com/in/bertrandtang/', '_blank')"><span>Linkedin</span></button></li>
+            <li><button id="Linkedin" class="buttons__profile" onclick="window.open('#', '_blank')"><span>Linkedin</span></button></li>
             <li><button id="Github" class="buttons__profile" onclick="window.open('https://github.com/BertrandTang', '_blank')"><span>Github</span></button></li>
             <li><button id="Projets" class="buttons__profile" onclick="window.open('#', '_blank')"><span>Projets</span></button></li>
-            <li><button id="Compétences" class="buttons__profile" onclick="window.location.href = '/skills';""><span>Skills</span></button></li>
+            <li><button id="Profile" class="buttons__profile" onclick="window.location.href = '/profile';"><span>Profile</span></button></li>
           </ul>
       </section>
     </main>
-    <script src="/js/buttons__profile.js"></script>
-
-    <%- include ('partials/matrix') %> <%- include ('partials/footer') %>
+    <%- include ('partials/matrix') %> 
+    <%- include ('partials/footer') %>
   </body>
 </html>
