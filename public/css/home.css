@@ -199,6 +199,7 @@ footer {
   width: auto;
 }
 
+/*
 .switch {
   display: block;
   background-color: black;
@@ -212,6 +213,7 @@ footer {
   bottom: 5%;
   right: 5%;
 }
+
 
 .switch input {
   display: none;
@@ -340,6 +342,8 @@ footer {
     opacity: 0;
   }
 }
+
+*/
 
 @media screen and (min-width:320px) and (max-width:479px) {
 
