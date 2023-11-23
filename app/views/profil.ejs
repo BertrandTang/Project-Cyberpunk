@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="/css/profile.css" />
+    <link rel="stylesheet" type="text/css" href="/css/profil.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"  />
 
-    <title>Profile 👤</title>
+    <title>Profil 👤</title>
   </head>
 
   <body>
@@ -23,7 +23,7 @@
         <section class="window">
           <div class="window-title-bar">
             <h2 class="window-title">Welcome to my introduction 👋</h2>
-            <div class="window-buttons">
+             <div class="window-buttons">
               <a
                 href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                 target="_blank"
@@ -36,30 +36,26 @@
           <section class="window-content">
             <p id="hello">Hello World !</p>
             <p id="message">
-              Je m'appelle <em>Bertrand Tang</em>, je suis un
+              Je m'appelle <em>Bertrand</em>, je suis un
               padawan sur la voie du <em>Développeur Web Fullstack</em> depuis
               <em>Juin 2023</em> ! <br />
               <br />
               Actuellement <em>en fin de formation</em>, je suis en recherche
-              active d'un poste dans lequel faire mes armes et gagner en
-              expérience. <br />
+              active d'un poste dans lequel faire mes premiers pas en tant que développeur web mais également <em>développer mon stack</em>. <br />
               <br />
-              Celle-ci prenant fin le <em>17.11.2023</em>, je ne serai
-              disponible qu'après cette date. Je reste cependant joignable et
-              disposé pour des potentiels entretiens ou pour répondre à vos
-              questions.
+              Ma formation étant désormais terminée, je suis à votre entière disposition pour des potentiels entretiens ou pour répondre à vos
+              questions, si toute fois vous en avez !
             </p>
           <ul id="buttons_section">
-            <li><button id="Contact" class="buttons__profile" onclick="window.open('#', '_blank')""><span>Contact</span></button></li>
-            <li><button id="Linkedin" class="buttons__profile" onclick="window.open('https://www.linkedin.com/in/bertrandtang/', '_blank')"><span>Linkedin</span></button></li>
-            <li><button id="Github" class="buttons__profile" onclick="window.open('https://github.com/BertrandTang', '_blank')"><span>Github</span></button></li>
-            <li><button id="Projets" class="buttons__profile" onclick="window.open('#', '_blank')"><span>Projets</span></button></li>
-            <li><button id="Compétences" class="buttons__profile" onclick="window.location.href = '/skills';""><span>Skills</span></button></li>
+            <li><button id="Contact" class="button__nav" onclick="window.location.href = '/contact';"><span>Contact</span></button></li>
+            <li><button id="Linkedin" class="button__nav" onclick="window.open('https://www.linkedin.com/in/bertrandtang/', '_blank')"><span>Linkedin</span></button></li>
+            <li><button id="Github" class="button__nav" onclick="window.open('https://github.com/BertrandTang', '_blank')"><span>Github</span></button></li>
+            <li><button id="Projets" class="button__nav" onclick="window.location.href ='/projets';"><span>Projets</span></button></li>
+            <li><button id="Compétences" class="button__nav" onclick="window.location.href = '/skills';"><span>Skills</span></button></li>
+            <li><button id="CV" class="button__nav" onclick="window.location.href = '/skills';"><span>Carrière</span></button></li>
           </ul>
       </section>
     </main>
-    <script src="/js/buttons__profile.js"></script>
-
     <%- include ('partials/matrix') %> <%- include ('partials/footer') %>
   </body>
 </html>

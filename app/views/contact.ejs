@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/css/contact.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"  />
+
+    <title>Contact ✉️</title>
+  </head>
+
+  <body>
+    <main>
+      <h1>OS.X.2050</h1>
+      <section id="window__outer">
+        <section class="window">
+          <div class="window-title-bar">
+            <h2 class="window-title">Call Me Maybe ? ☎️</h2>
+            <div class="window-buttons">
+              <a
+                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                target="_blank"
+                ><button class="window-button maximize"></button
+              ></a>
+              <button class="window-button minimize"></button>
+              <a href="/"><button class="window-button close"></button></a>
+            </div>
+          </div>
+          <section class="window-content">
+
+            <div id="form_container">
+            <form id="contact_form" action="/contact" method="post"> 
+                <input type="text" name="name" placeholder="Nom"> <br>
+                <input type="text" name="firstname" placeholder="Prénom"> <br>
+                <input type="email" name="email" placeholder="Adresse e-mail"> <br>
+                <textarea name="message" placeholder="Message"></textarea> <br>
+                <button type="submit" id="submit_button">Envoyer</button>
+              </form>
+            </div>
+              
+          <ul id="buttons_section">
+            <li><button id="Contact" class="button__nav" onclick="window.open('#', '_blank')""><span>Contact</span></button></li>
+            <li><button id="Linkedin" class="button__nav" onclick="window.open('https://www.linkedin.com/in/bertrandtang/', '_blank')"><span>Linkedin</span></button></li>
+            <li><button id="Github" class="button__nav" onclick="window.open('https://github.com/BertrandTang', '_blank')"><span>Github</span></button></li>
+            <li><button id="Projets" class="button__nav" onclick="window.location.href = '/projets';""><span>Projets</span></button></li>
+            <li><button id="Compétences" class="button__nav" onclick="window.location.href = '/skills';""><span>Skills</span></button></li>
+          </ul>
+      </section>
+    </main>
+    <script src="/js/button__nav.js"></script>
+
+    <%- include ('partials/matrix') %> <%- include ('partials/footer') %>
+  </body>
+</html>

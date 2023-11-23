@@ -5,12 +5,20 @@ router.get('/', (req, res) => {
     res.render('home')
   });
 
-  router.get('/profile', (req, res) => {
-    res.render('profile')
+  router.get('/profil', (req, res) => {
+    res.render('profil')
+  });
+
+  router.get('/projets', (req, res) => {
+    res.render('projets')
   });
 
   router.get('/skills', (req, res) => {
     res.render('skills')
+  });
+
+  router.get('/contact', (req, res) => {
+    res.render('contact')
   });
 
   module.exports = router;

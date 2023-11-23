@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     const button = document.querySelector('.minimize');
     
-    const audio = new Audio("../mp3/dry-fart.mp3")
+    const audio = new Audio("../mp3/pikachu.mp3")
     
     button.addEventListener('click', function() {
       audio.play();
-      confirm(`💨 ... Mais t'as pété ? 👀`);
+      confirm('Website powered by Pikachu ⚡️');
     });
 
     // This code adds a click event on maximize button that plays Never Gonna Give You Up
