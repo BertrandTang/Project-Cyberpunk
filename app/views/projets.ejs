@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="/css/profil.css" />
+    <link rel="stylesheet" type="text/css" href="/css/projets.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,14 +19,16 @@
 
   <body>
     <main>
-      <h1>OS.X.2050</h1>
+      <a href="/">
+        <img id="logo" src="/img/logo_long.png" alt="">
+      </a>
       <section id="window__outer">
         <section class="window">
           <div class="window-title-bar">
-            <h2 class="window-title">Welcome to my introduction 👋</h2>
-            <div class="window-buttons">
+            <h2 class="window-title">Mes projets 🗂️</h2>
+             <div class="window-buttons">
               <a
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                href="https://youtu.be/dQw4w9WgXcQ"
                 target="_blank"
                 ><button class="window-button maximize"></button
               ></a>
@@ -43,15 +46,18 @@
               Actuellement <em>en fin de formation</em>, je suis en recherche
               active d'un poste dans lequel faire mes premiers pas en tant que développeur web mais également <em>développer mon stack</em>. <br />
               <br />
-              Ma formation étant désormais terminée, je suis à votre entière disposition pour des potentiels entretiens ou pour répondre à vos
-              questions, si toute fois vous en avez !
+              Ma formation étant désormais terminée, je suis à votre entière disposition pour de potentiels entretiens ou pour répondre à vos
+              questions, si toute fois vous en avez. <br />
+              <br />
+              Je vous souhaite une bonne visite de mon site ! 
             </p>
           <ul id="buttons_section">
-            <li><button id="Contact" class="buttons__nav" onclick="window.location.href = '/contact';"><span>Contact</span></button></li>
-            <li><button id="Linkedin" class="buttons__nav" onclick="window.open('https://www.linkedin.com/in/bertrandtang/', '_blank')"><span>Linkedin</span></button></li>
-            <li><button id="Github" class="buttons__nav" onclick="window.open('https://github.com/BertrandTang', '_blank')"><span>Github</span></button></li>
-            <li><button id="Profil" class="buttons__nav" onclick="window.location.href = '/profil';"><span>Profil</span></button></li>
-            <li><button id="Compétences" class="buttons__nav" onclick="window.location.href = '/skills';"><span>Skills</span></button></li>
+            <li><button id="Contact" class="button__nav" onclick="window.location.href = '/contact';"><span>Contact</span></button></li>
+            <li><button id="Linkedin" class="button__nav" onclick="window.open('https://www.linkedin.com/in/bertrandtang/', '_blank')"><span>Linkedin</span></button></li>
+            <li><button id="Github" class="button__nav" onclick="window.open('https://github.com/BertrandTang', '_blank')"><span>Github</span></button></li>
+            <li><button id="Profil" class="button__nav" onclick="window.location.href ='/profil';"><span>Profil</span></button></li>
+            <li><button id="Compétences" class="button__nav" onclick="window.location.href = '/skills';"><span>Skills</span></button></li>
+            <li><button id="CV" class="button__nav" onclick="window.location.href = '/cv';"><span>Carrière</span></button></li>
           </ul>
       </section>
     </main>

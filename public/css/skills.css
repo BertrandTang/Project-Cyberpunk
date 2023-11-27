@@ -11,11 +11,18 @@ html {
 
 h1 {
   color: rgb(8, 236, 23);
-  font-size: 5rem;
+  font-size: 8rem;
   letter-spacing: 1rem;
   position: absolute;
   top: 3%;
   left: 5%;
+}
+
+#logo {
+  top: 2%;
+  left: 2%;
+  position: absolute;
+  z-index: 1;
 }
 
 h2 {
@@ -40,7 +47,12 @@ h3 {
 
 .window {
   width: 80%;
-  height: 75%;
+  height: 65%;
+  margin: auto;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #5b595b;
   border: 3px solid #80ab8d;
   position: relative;
@@ -84,11 +96,13 @@ h3 {
 .window-content {
   text-align: justify;
   color: #ffffff;
-  line-height: 3rem;
+  line-height: 2.3rem;
   font-weight: 400;
   font-size: 2rem;
-  padding: 2rem 4rem 0rem 4rem;
+  padding: 0rem 3rem 0rem 3rem;
   width: 100%;
+  overflow-y: auto;
+  height: 100%;
 }
 
 #hello {
@@ -97,20 +111,20 @@ h3 {
   margin-bottom: 4rem;
 }
 
-#list_techno{
+#list_techno {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
 }
 
-.icons{
+.icons {
   align-self: center;
   width: 160px;
-  padding:1rem;
+  padding: 1rem;
 }
 
-img {
+.icons img {
   text-align: center;
   width: 150px;
 }
@@ -119,187 +133,182 @@ em {
   color: #0dff00;
 }
 
-
 #buttons_section {
-display: flex;
-width: 100%;
+  display: flex;
+  padding-bottom: 5rem;
+  width: 100%;
 }
 
-#buttons_section li{
-    text-align: center;
-    width: 20%;
+#buttons_section li {
+  text-align: center;
+  width: 20%;
 }
 
-li button{
-    margin-top: 2rem;
-    font-size: 2.5rem;
-    letter-spacing: 0.3rem;
-    padding: 0.5rem;
-    border: none;
-    border-radius: 100px;
-    cursor: pointer;
+li button {
+  margin-top: 4rem;
+  font-size: 2.5rem;
+  letter-spacing: 0.3rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
 }
 
 .button__nav {
-    --btn-default-bg: rgb(41, 41, 41);
-    --btn-padding: 20px 20px;
-    --btn-hover-bg: rgb(51, 51, 51);
-    --btn-transition: .3s;
-    --btn-letter-spacing: .1rem;
-    --btn-animation-duration: 1.2s;
-    --btn-shadow-color: rgba(0, 0, 0, 0.137);
-    --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
-    --hover-btn-color: #F0F;
-    --font-size:2rem;
-    /* 👆 this field should not be empty */
-    --font-weight: 600;
-    --font-family: Menlo,Roboto Mono,monospace;
-    /* 👆 this field should not be empty */
+  --btn-default-bg: rgb(41, 41, 41);
+  --btn-padding: 20px 20px;
+  --btn-hover-bg: rgb(41, 41, 41);
+  --btn-transition: 0.3s;
+  --btn-letter-spacing: 0.1rem;
+  --btn-animation-duration: 1.2s;
+  --btn-shadow-color: rgba(0, 0, 0, 0.137);
+  --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+  --hover-btn-color: rgb(255, 0, 149);
+  --font-size: 2rem;
+  /* 👆 this field should not be empty */
+  --font-weight: 600;
+  --font-family: Menlo, Roboto Mono, monospace;
+  /* 👆 this field should not be empty */
+}
+
+/* button settings 👆 */
+
+.button__nav {
+  border-radius: 30px 0px 30px 0px;
+  box-sizing: border-box;
+  padding: 1.1rem;
+  justify-content: center;
+  color: #0dff00;
+  font: var(--font-weight) var(--font-size) var(--font-family);
+  background: var(--btn-default-bg);
+  border: none;
+  cursor: pointer;
+  transition: var(--btn-transition);
+  overflow: hidden;
+  box-shadow: var(--btn-shadow);
+}
+
+.button__nav span {
+  letter-spacing: var(--btn-letter-spacing);
+  transition: var(--btn-transition);
+  box-sizing: border-box;
+  position: relative;
+  background: inherit;
+}
+
+.button__nav span::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  background: inherit;
+}
+
+.button__nav:hover,
+.button__nav:focus {
+  border-radius: 40px;
+  background: var(--btn-hover-bg);
+}
+
+.button__nav:hover span,
+.button__nav:focus span {
+  color: var(--hover-btn-color);
+}
+
+.button__nav:hover span::before,
+.button__nav:focus span::before {
+  animation: chitchat linear both var(--btn-animation-duration);
+}
+
+@keyframes chitchat {
+  0% {
+    content: "#";
   }
-  
-  /* button settings 👆 */
-  
-  .button__nav {
-    border-radius: 30px 0px 30px 0px;
-    box-sizing: border-box;
-    padding: 2rem;
-    justify-content: center;
-    color: #0dff00;
-    font: var(--font-weight) var(--font-size) var(--font-family);
-    background: var(--btn-default-bg);
-    border: none;
-    cursor: pointer;
-    transition: var(--btn-transition);
-    overflow: hidden;
-    box-shadow: var(--btn-shadow);
+
+  5% {
+    content: ".";
   }
-  
-  .button__nav span {
-    letter-spacing: var(--btn-letter-spacing);
-    transition: var(--btn-transition);
-    box-sizing: border-box;
-    position: relative;
-    background: inherit;
+
+  10% {
+    content: "^{";
   }
-  
-  .button__nav span::before {
-    box-sizing: border-box;
-    position: absolute;
+
+  15% {
+    content: "-!";
+  }
+
+  20% {
+    content: "#$_";
+  }
+
+  25% {
+    content: "№:0";
+  }
+
+  30% {
+    content: "#{+.";}35%{content: "@}-?";
+  }
+
+  40% {
+    content: "?{4@%";
+  }
+
+  45% {
+    content: "=.,^!";
+  }
+
+  50% {
+    content: "?2@%";
+  }
+
+  55% {
+    content: "\;1}]";
+  }
+
+  60% {
+    content: "?{%:%";
+    right: 0;
+  }
+
+  65% {
+    content: "|{f[4";
+    right: 0;
+  }
+
+  70% {
+    content: "{4%0%";
+    right: 0;
+  }
+
+  75% {
+    content: "'1_0<";
+    right: 0;
+  }
+
+  80% {
+    content: "{0%";
+    right: 0;
+  }
+
+  85% {
+    content: "]>'";
+    right: 0;
+  }
+
+  90% {
+    content: "4";
+    right: 0;
+  }
+
+  95% {
+    content: "2";
+    right: 0;
+  }
+
+  100% {
     content: "";
-    background: inherit;
+    right: 0;
   }
-  
-  .button__nav:hover, 
-  .button__nav:focus {
-    background: var(--btn-hover-bg);
-  }
-  
-  .button__nav:hover span, 
-  .button__nav:focus span {
-    color: var(--hover-btn-color);
-  }
-  
-  .button__nav:hover span::before, 
-  .button__nav:focus span::before {
-    animation: chitchat linear both var(--btn-animation-duration);
-  }
-  
-  @keyframes chitchat {
-    0% {
-      content: "#";
-    }
-  
-    5% {
-      content: ".";
-    }
-  
-    10% {
-      content: "^{";
-    }
-  
-    15% {
-      content: "-!";
-    }
-  
-    20% {
-      content: "#$_";
-    }
-  
-    25% {
-      content: "№:0";
-    }
-  
-    30% {
-      content: "#{+.";
-    }
-  
-    35% {
-      content: "@}-?";
-    }
-  
-    40% {
-      content: "?{4@%";
-    }
-  
-    45% {
-      content: "=.,^!";
-    }
-  
-    50% {
-      content: "?2@%";
-    }
-  
-    55% {
-      content: "\;1}]";
-    }
-  
-    60% {
-      content: "?{%:%";
-      right: 0;
-    }
-  
-    65% {
-      content: "|{f[4";
-      right: 0;
-    }
-  
-    70% {
-      content: "{4%0%";
-      right: 0;
-    }
-  
-    75% {
-      content: "'1_0<";
-      right: 0;
-    }
-  
-    80% {
-      content: "{0%";
-      right: 0;
-    }
-  
-    85% {
-      content: "]>'";
-      right: 0;
-    }
-  
-    90% {
-      content: "4";
-      right: 0;
-    }
-  
-    95% {
-      content: "2";
-      right: 0;
-    }
-  
-    100% {
-      content: "";
-      right: 0;
-    }
-  }
-
-
+}
 
 /* Styles pour les boutons de la barre de titre */
 
@@ -335,4 +344,23 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   width: auto;
+}
+
+/* Styles pour la barre de défilement */
+/* Pour les navigateurs WebKit (comme Chrome et Safari) */
+.window-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.window-content::-webkit-scrollbar-thumb {
+  background-color: #4caf50;
+}
+
+/* Pour les navigateurs Firefox */
+.window-content.scrollbar {
+  width: 8px;
+}
+
+.window-content.scrollbar-thumb {
+  background-color: #4caf50;
 }

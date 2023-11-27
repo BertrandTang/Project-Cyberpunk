@@ -21,4 +21,8 @@ router.get('/', (req, res) => {
     res.render('contact')
   });
 
+  router.get('/test', (req, res) => {
+    res.render('test')
+  });
+
   module.exports = router;
