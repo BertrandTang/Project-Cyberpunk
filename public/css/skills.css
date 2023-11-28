@@ -9,15 +9,6 @@ html {
   font-family: "Quicksand", sans-serif;
 }
 
-h1 {
-  color: rgb(8, 236, 23);
-  font-size: 8rem;
-  letter-spacing: 1rem;
-  position: absolute;
-  top: 3%;
-  left: 5%;
-}
-
 #logo {
   top: 2%;
   left: 2%;
@@ -25,12 +16,7 @@ h1 {
   z-index: 1;
 }
 
-h2 {
-  color: white;
-  font-size: 3rem;
-}
-
-h3 {
+h1 {
   color: white;
   font-size: 3rem;
 }
