@@ -38,6 +38,17 @@
             </div>
           </div>
           <section class="window-content">
+            <label class="switch">
+              <input id="toggle" type="checkbox">
+            <div class="button">
+              <div class="light"></div>
+              <div class="dots"></div>
+              <div class="characters">MENU</div>
+              <div class="shine"></div>
+              <div class="shadow"></div>
+            </div>
+            
+            </label>
             <p id="hello" class="typewriter">Hello World !</p>
             <p id="message">
               Je m'appelle <em>Bertrand</em>, je suis un
@@ -54,45 +65,28 @@
               LinkedIn ou via mon formulaire de contact.
               <br />
               <br />
-              Je vous souhaite une excellente visite ! 😊⬇️
+              Je vous souhaite une excellente visite ! 😊
             </p>
-          <ul id="buttons_section">
-            <li></li>
-            <li><button id="Linkedin" class="button__nav" onclick="window.open('https://www.linkedin.com/in/bertrandtang/', '_blank')"><span>Linkedin</span></button></li>
-            <li><button id="Github" class="button__nav" onclick="window.open('https://github.com/BertrandTang', '_blank')"><span>Github</span></button></li>
-            <li><button id="Projets" class="button__nav" onclick="window.location.href ='/projets';"><span>Projets</span></button></li>
-            <li><button id="Compétences" class="button__nav" onclick="window.location.href = '/skills';"><span>Skills</span></button></li>
-            <li><button id="CV" class="button__nav" onclick="window.location.href = '#';"><span>Carrière</span></button></li>
-          </ul>
-
+            <div class="nav">
+              <div class="nav-wrapper">
+                <nav>
+                  <button id="Contact" class="button__nav" onclick="window.location.href = '/contact';"><span>Contact</span></button><br>
+                  <button id="Linkedin" class="button__nav" onclick="window.open('https://www.linkedin.com/in/bertrandtang/', '_blank')"><span>Linkedin</span></button><br>
+                  <button id="Github" class="button__nav" onclick="window.open('https://github.com/BertrandTang', '_blank')"><span>Github</span></button><br>
+                  <button id="Projets" class="button__nav" onclick="window.location.href ='/projets';"><span>Projets</span></button><br>
+                  <button id="Compétences" class="button__nav" onclick="window.location.href = '/skills';"><span>Skills</span></button><br>
+                  <button id="CV" class="button__nav" onclick="window.location.href = '#';"><span>Carrière</span></button>
+                </nav>
+              </div>
+            </div>
                 <!-- Flèche de défilement -->
-  <div class="scroll-down-arrow" onclick="scrollToBottom()">↓</div>
+  <div class="scroll-down-arrow" onclick="scrollToTop()">↑</div>
 </section>
-
-<div class="nav">
-<div class="nav-wrapper">
-  <nav>
-    <button id="Contact" class="button__nav" onclick="window.location.href = '/contact';"><span>Contact</span></button><br>
-    <a href="#">ABOUT</a><br>
-    <a href="#">WORK</a><br>
-    <a href="#">SERVICES</a>
-  </nav>
-</div>
-
     </main>
-    <label class="switch">
-      <input id="toggle" type="checkbox">
-    <div class="button">
-      <div class="light"></div>
-      <div class="dots"></div>
-      <div class="characters"></div>
-      <div class="shine"></div>
-      <div class="shadow"></div>
-    </div>
-    </label>
+    
   </body>
   <script src="/js/menu_burger.js"></script>
-  <script src="/js/scroll_bottom.js"></script>
+  <script src="/js/scroll_top.js"></script>
   <%- include ('partials/matrix') %> 
   <%- include ('partials/footer') %>
 </html>
