@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="/css/contact.css" />
+    <link rel="stylesheet" type="text/css" href="/css/carriere.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"  />
 
-    <title>Contact ✉️</title>
+    <title>Carrière 🗄️</title>
   </head>
 
   <body>
@@ -25,10 +25,10 @@
       <section id="window__outer">
         <section class="window">
           <div class="window-title-bar">
-            <h1 class="window-title"> Call Me Maybe ? ☎️</h1>
-            <div class="window-buttons">
+            <h1 class="window-title">Ma carrière 🗄️</h1>
+             <div class="window-buttons">
               <a
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                href="https://youtu.be/dQw4w9WgXcQ"
                 target="_blank"
                 ><button class="window-button maximize"></button
               ></a>
@@ -49,41 +49,39 @@
             </div>
             </label>
 
-            
-<div class="form-container">
-  <form class="form">
-      <h2 class="heading"> Vous avez trouvé un bug ? Une coquille ou simplement avoir plus d'information à mon sujet ? <br> C'est par ici :</h2>
-      <input placeholder="Name" type="text" class="input">
-      <input placeholder="Email" id="mail" type="email" class="input">
-      <textarea placeholder="Say Hello" rows="10" cols="30" id="message" name="message" class="textarea"></textarea>
-      <div class="button-container">
-      <div type="submit" class="send-button">Send</div>
-      <div class="reset-button-container">
-          <div type="reset" id="reset-btn" class="reset-button">Reset</div>
-      </div>
-  </div>
-</form>
-</div>
-            
+            <p id="message"> Voici les projets sur lesquels j'ai pu travailler, dans le cadre de la formation mais également en marge de celle-ci : </p>
+            <section class="projects__section">
+
+              <div class="card" onclick="window.location.href = '/contact';">
+                <img src="/img/burgerTrex.png" alt="Image 1">
+                <h3>Dino Diner</h3>
+              </div>
+
+              <div class="card" onclick="window.location.href = '/contact';">
+                <img src="/img/prince_fae.png" alt="Image 2">
+                <h3>Stable Diffusion</h3>
+            </section>
+
             <div class="nav">
               <div class="nav-wrapper">
                 <nav>
-                  <button id="Profil" class="button__nav" onclick="window.location.href = '/profil';"><span>Profil</span></button><br>
+                  <button id="Contact" class="button__nav" onclick="window.location.href = '/contact';"><span>Contact</span></button><br>
                   <button id="Linkedin" class="button__nav" onclick="window.open('https://www.linkedin.com/in/bertrandtang/', '_blank')"><span>Linkedin</span></button><br>
                   <button id="Github" class="button__nav" onclick="window.open('https://github.com/BertrandTang', '_blank')"><span>Github</span></button><br>
                   <button id="Projets" class="button__nav" onclick="window.location.href ='/projets';"><span>Projets</span></button><br>
                   <button id="Compétences" class="button__nav" onclick="window.location.href = '/skills';"><span>Skills</span></button><br>
-                  <button id="CV" class="button__nav" onclick="window.location.href = '#';"><span>Carrière</span></button>
+                  <button id="Profil" class="button__nav" onclick="window.location.href = '/profil';"><span>Profil</span></button>
                 </nav>
               </div>
             </div>
                 <!-- Flèche de défilement -->
   <div class="scroll-down-arrow" onclick="scrollToTop()">↑</div>
-      </section>
+</section>
     </main>
-    <script src="/js/menu_burger.js"></script>
+    
+  </body>
+  <script src="/js/menu_burger.js"></script>
   <script src="/js/scroll_top.js"></script>
   <%- include ('partials/matrix') %> 
   <%- include ('partials/footer') %>
-  </body>
 </html>

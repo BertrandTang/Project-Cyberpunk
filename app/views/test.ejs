@@ -1,92 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="/css/test.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"  />
-
-    <title>Profil 👤</title>
-  </head>
-
-  <body>
-    <main>
-      <a href="/">
-        <img id="logo" src="/img/logo_long.png" alt="">
-      </a>
-
-      <section id="window__outer">
-        <section class="window">
-          <div class="window-title-bar">
-            <h1 class="window-title">Welcome to my introduction 👋</h1>
-             <div class="window-buttons">
-              <a
-                href="https://youtu.be/dQw4w9WgXcQ"
-                target="_blank"
-                ><button class="window-button maximize"></button
-              ></a>
-              <button class="window-button minimize"></button>
-              <a href="/"><button class="window-button close"></button></a>
-            </div>
-          </div>
-          <section class="window-content">
-            <label class="switch">
-              <input id="toggle" type="checkbox">
-            <div class="button">
-              <div class="light"></div>
-              <div class="dots"></div>
-              <div class="characters">MENU</div>
-              <div class="shine"></div>
-              <div class="shadow"></div>
-            </div>
-            
-            </label>
-            <p id="hello" class="typewriter">Hello World !</p>
-            <p id="message">
-              Je m'appelle <em>Bertrand</em>, je suis un
-              padawan sur la voie du <em>Développeur Web Fullstack</em> depuis
-              <em>Juin 2023</em> ! <br />
-              <br />
-              Ma formation ayant pris fin <em>en Novembre 2023</em>, je suis en recherche
-              active d'un poste dans lequel <em>faire mes premiers pas en tant que développeur web</em> mais surtout dans lequel je pourrais <em>développer mon stack</em>. <br />
-              <br />
-              J'<em>apprends vite</em>, je suis <em>motivé</em> et surtout <em>enthousiaste</em> de commencer un nouveau chapitre professionnel de ma vie ! 
-              <br />
-              <br />
-              Je vous invite donc à visiter mon site portofolio et si toute fois mon profil vous intéresse, vous pouvez me contacter via 
-              LinkedIn ou via mon formulaire de contact.
-              <br />
-              <br />
-              Je vous souhaite une excellente visite ! 😊
-            </p>
-            <div class="nav">
-              <div class="nav-wrapper">
-                <nav>
-                  <button id="Contact" class="button__nav" onclick="window.location.href = '/contact';"><span>Contact</span></button><br>
-                  <button id="Linkedin" class="button__nav" onclick="window.open('https://www.linkedin.com/in/bertrandtang/', '_blank')"><span>Linkedin</span></button><br>
-                  <button id="Github" class="button__nav" onclick="window.open('https://github.com/BertrandTang', '_blank')"><span>Github</span></button><br>
-                  <button id="Projets" class="button__nav" onclick="window.location.href ='/projets';"><span>Projets</span></button><br>
-                  <button id="Compétences" class="button__nav" onclick="window.location.href = '/skills';"><span>Skills</span></button><br>
-                  <button id="CV" class="button__nav" onclick="window.location.href = '#';"><span>Carrière</span></button>
-                </nav>
-              </div>
-            </div>
-                <!-- Flèche de défilement -->
-  <div class="scroll-down-arrow" onclick="scrollToTop()">↑</div>
-</section>
-    </main>
-    
-  </body>
-  <script src="/js/menu_burger.js"></script>
-  <script src="/js/scroll_top.js"></script>
-  <%- include ('partials/matrix') %> 
-  <%- include ('partials/footer') %>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Téléchargement de fichier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button><a id="downloadLink" href="#" onclick="downloadFile()">Télécharger mon CV</a></button>
+    <script src="/js/download_file.js"></script>
+</body>
 </html>

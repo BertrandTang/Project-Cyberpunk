@@ -36,7 +36,19 @@
             </div>
           </div>
           <section class="window-content">
-            <p id="message">Voici <em>les technologies</em> que j'ai pu utilisé pendant ma formation à l'<em>École O'clock</em> :</p>
+
+            <label class="switch">
+              <input id="toggle" type="checkbox">
+            <div class="button">
+              <div class="light"></div>
+              <div class="dots"></div>
+              <div class="characters">MENU</div>
+              <div class="shine"></div>
+              <div class="shadow"></div>
+            </div>
+            </label>
+
+            <p id="message">Voici <em>les technologies</em> que j'ai pu utilisé pendant ma formation à l'<em>École O'clock</em> et en dehors :</p>
             <ul id="list_techno">
               <li class="icons" id="html"><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank"><img src="/img/html.png" alt=""></a></li>
               <li class="icons" id="css"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="/img/css.png" alt=""></a></li>
@@ -57,18 +69,28 @@
               <li class="icons" id="docker"><a href="https://www.docker.com/" target="_blank"><img src="/img/docker.svg" alt=""></a></li>
               <li class="icons" id="github"><a href="https://github.com/" target="_blank"><img src="/img/GitHub-logo.png" alt=""></a></li>
               <li class="icons" id="git"><a href="https://git-scm.com/" target="_blank"><img src="/img/git.png" alt=""></a></li>
+              <li class="icons" id="stablediffusion"><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui" target="_blank"><img src="/img/stablediffusion.png" alt=""></a></li>
             </ul>
-          <ul id="buttons_section">
-            <li><button id="Contact" class="button__nav" onclick="window.location.href = '/contact';"><span>Contact</span></button></li>
-            <li><button id="Linkedin" class="button__nav" onclick="window.open('https://www.linkedin.com/in/bertrandtang/', '_blank')"><span>Linkedin</span></button></li>
-            <li><button id="Github" class="button__nav" onclick="window.open('https://github.com/BertrandTang', '_blank')"><span>Github</span></button></li>
-            <li><button id="Projets" class="button__nav" onclick="window.location.href = '/projets';""><span>Projets</span></button></li>
-            <li><button id="Profil" class="button__nav" onclick="window.location.href = '/profil';"><span>Profil</span></button></li>
-            <li><button id="CV" class="button__nav" onclick="window.location.href = '#';"><span>Carrière</span></button></li>          
-          </ul>
-      </section>
+                  <div class="nav">
+              <div class="nav-wrapper">
+                <nav>
+                  <button id="Contact" class="button__nav" onclick="window.location.href = '/contact';"><span>Contact</span></button><br>
+                  <button id="Linkedin" class="button__nav" onclick="window.open('https://www.linkedin.com/in/bertrandtang/', '_blank')"><span>Linkedin</span></button><br>
+                  <button id="Github" class="button__nav" onclick="window.open('https://github.com/BertrandTang', '_blank')"><span>Github</span></button><br>
+                  <button id="Projets" class="button__nav" onclick="window.location.href ='/projets';"><span>Projets</span></button><br>
+                  <button id="Profil" class="button__nav" onclick="window.location.href = '/profil';"><span>Profil</span></button><br>
+                  <button id="CV" class="button__nav" onclick="window.location.href = '/carriere';"><span>Carrière</span></button>
+                </nav>
+              </div>
+            </div>
+                <!-- Flèche de défilement -->
+  <div class="scroll-down-arrow" onclick="scrollToTop()">↑</div>
+</section>
     </main>
-    <%- include ('partials/matrix') %> 
-    <%- include ('partials/footer') %>
+    
   </body>
+  <script src="/js/menu_burger.js"></script>
+  <script src="/js/scroll_top.js"></script>
+  <%- include ('partials/matrix') %> 
+  <%- include ('partials/footer') %>
 </html>

@@ -21,6 +21,10 @@ router.get('/', (req, res) => {
     res.render('contact')
   });
 
+  router.get('/carriere', (req, res) => {
+    res.render('carriere')
+  });
+
   router.get('/test', (req, res) => {
     res.render('test')
   });
