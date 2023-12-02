@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 * {
     box-sizing: border-box;
   }
@@ -97,7 +100,6 @@
     height: 100%;
   }
   
-  
   .button__nav {
     --btn-default-bg: rgb(41, 41, 41);
     --btn-padding: 20px 20px;
@@ -129,7 +131,6 @@
     display: inline-block;
     margin: 1rem 0rem;
   }
-  
   
   .button__nav span {
     letter-spacing: var(--btn-letter-spacing);
@@ -333,54 +334,6 @@
     background-color: #4caf50;
   }
   
-  .projects__section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .card{
-    width: 25%;
-    margin: 1rem;
-    text-align: center;
-    --color: #0dff00; /* the border color */
-    --border: 10px;   /* the border thickness*/
-    --offset: 15px;   /* control the offset*/
-    --gap: 5px;       /* the gap on hover */
-    
-    --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)),var(--color) 0;
-    --_o: calc(3*var(--offset));
-    padding: 
-      calc(var(--gap) + var(--border))
-      calc(var(--gap) + var(--border) + var(--offset))
-      calc(var(--gap) + var(--border) + var(--offset))
-      calc(var(--gap) + var(--border));
-    background: 
-      linear-gradient(      var(--_c)) var(--_o) var(--_o), 
-      linear-gradient(90deg,var(--_c)) var(--_o) var(--_o);
-    background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
-    background-repeat: no-repeat;
-    filter: grayscale(.8);
-    transition: .5s;
-    cursor: pointer;
-  }
-  
-  .card:hover {
-    background-position: 0px 0px;
-    background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
-    filter: grayscale(0);
-  }
-  
-  .card img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .card h3 {
-    padding: 1rem;
-  }
-  
   .scroll-down-arrow {
     position: fixed;
     bottom: 7rem;
@@ -428,6 +381,7 @@
     z-index: 2;
   
   }
+
   .switch input {
     display: none;
   }
@@ -604,6 +558,114 @@
     overflow-y: auto;
     height: 100%;
   }
+
+  .card {
+    border: 1px solid #0dff00;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 2rem 2rem 0rem 2rem;
+    padding: 1rem;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 100%;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .content {
+    border: 1px solid #0dff00;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #e8e8e8;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    width: fit-content;
+    z-index: 1;
+  }
+  
+  .content .heading {
+    border: 1px solid #0dff00;
+    text-align: left;
+    font-weight: 700;
+    font-size: 1.7rem;
+    line-height: 2.3rem;
+    font-family: 'Nova Square', sans-serif;
+    font-weight: 800;
+    padding: 0.5rem;
+  }
+
+  .information__section {
+    padding: 0.5rem;
+  }
+
+  .date {
+    font-family: 'Nova Square', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0rem 0rem 0.5rem 0rem;
+  }
+
+  .school {
+    font-family: 'Nova Square', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0rem 0rem 0.5rem 0rem;
+  }
+
+  .skills {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .content .btn {
+    color: #e8e8e8;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .card:hover::before {
+    height: 100%;
+  }
+  
+  .card:hover {
+    box-shadow: none;
+  }
+  
+  .card:hover .btn {
+    color: #212121;
+    background: #e8e8e8;
+  }
+  
+  .content .btn:hover {
+    outline: 2px solid #e8e8e8;
+    background: transparent;
+    color: #e8e8e8;
+  }
+  
+  .content .btn:active {
+    box-shadow: none;
+  }
+  
   
   footer {
     color: black;
@@ -676,6 +738,7 @@
       font-family: "Oswald", sans-serif;
       float: left
     }
+
     .window-button {
       width: 1.5rem;
       height: 1.5rem;
@@ -688,6 +751,7 @@
       font-family: "Oswald", sans-serif;
       transition: 90ms;
     }
+
     .window-button {
       width: 1.3rem;
       height: 1.3rem;
@@ -700,10 +764,12 @@
       font-family: "Oswald", sans-serif;
       transition: 90ms;
     }
+
     .scroll-down-arrow {
       bottom: 5.5rem;
       right: 5.5rem;
     }
+
     .card h3 {
       font-size: 1.3rem;
     }

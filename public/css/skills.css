@@ -98,7 +98,7 @@ h1 {
   margin-bottom: 4rem;
 }
 
-#list_techno {
+.list_techno {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -107,13 +107,13 @@ h1 {
 
 .icons {
   align-self: center;
-  width: 160px;
+  width: 20%;
   padding: 1rem;
 }
 
 .icons img {
   text-align: center;
-  width: 150px;
+  width: 100%;
 }
 
 em {
@@ -545,7 +545,7 @@ Nav Styles
     margin: 1rem 0rem;
   }
 
-  #message {
+  .message {
     text-align: center;
     margin-top: 3rem;
     margin-bottom: 1rem;
@@ -624,14 +624,21 @@ Nav Styles
     right: 5.5rem;
   }
   
-  #list_techno {
+  .list_techno {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     margin-bottom: 3rem;
   }
+
+  .icons {
+    align-self: center;
+    width: 33.33%;
+    padding: 1rem;
+  }
 }
+
 
 /* Mobile Paysage */
 /* Styles pour les écrans entre 768 et 991 pixels de largeur (paysage) */
@@ -642,7 +649,7 @@ Nav Styles
     margin-top: 2rem;
   }
 
-  #message {
+  .message {
     text-align: center;
     font-size: 1.5rem;
     line-height: 2rem;
@@ -709,7 +716,7 @@ Nav Styles
     /* 👆 this field should not be empty */
   }
  
-  #list_techno {
+  .list_techno {
     font-size: 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -765,7 +772,7 @@ Nav Styles
     margin-top: 2rem;
   }
 
-  #message {
+  .message {
     text-align: center;
     font-size: 1.5rem;
     line-height: 2rem;
@@ -873,7 +880,7 @@ Nav Styles
     bottom: 5.5rem;
     right: 5.5rem;
   }
-  #list_techno {
+  .list_techno {
     font-size: 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -891,7 +898,7 @@ Nav Styles
     margin-top: 2rem;
   }
 
-  #message {
+  .message {
     text-align: center;
     font-size: 1.5rem;
     line-height: 2rem;
@@ -1000,12 +1007,23 @@ Nav Styles
     right: 8.5rem;
   }
 
-  #list_techno {
+  .list_techno {
     font-size: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     margin-bottom: 3rem;
+  }
+  
+  .icons {
+    align-self: center;
+    width: 10%;
+    padding: 1rem;
+  }
+  
+  .icons img {
+    text-align: center;
+    width: 100%;
   }
 }
