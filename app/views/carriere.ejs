@@ -47,78 +47,120 @@
               <div class="shadow"></div>
             </div>
             </label>
+            
+            <button type="button" onclick="downloadFile()" id="download_button">
+              <span class="button__text">Télécharger mon CV</span>
+            </button>
 
+
+            
             <p id="message"> Voici les projets sur lesquels j'ai pu travailler, dans le cadre de la formation mais également en marge de celle-ci : </p>
+            
+           
+            <ul class="title_section">
+              <li>
+                <input type="checkbox" />
+                <div class="letter">É</div>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <div class="letter">D</div>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <div class="letter">U</div>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <div class="letter">C</div>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <div class="letter">A</div>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <div class="letter">T</div>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <div class="letter">I</div>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <div class="letter">O</div>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <div class="letter">N</div>
+              </li>
+            </ul>
 
-            <h2 id="education_section">EDUCATION</h2>
-
-            <div class="card">
-              <div class="content">
-                <p class="heading" id="title_of_training">Formation Développeur Web Full Stack <em>(JavaScript & Node.js)</em></p>
-            <section class="information__section">
-                <p class="date">Juin 2023 — Novembre 2023<br></p>
-                <a onclick="window.open('https://oclock.io/formations/developpeur-web-fullstack-javascript', '_blank')">
-                  <p class="school">École Tech O'clock</p>
-                </a><br>
-                <div class="skills__section">
-                  <p class="skills">
-                  • HTML & CSS <br>
-                  • JavaScript Vanilla, Node.js & Express.js <br>
-                  • postgresql, SQL & Sequelize, database : MCD, MLD & POO <br>
-                  • API REST, CRUD & Introduction à la Cybersécurité <br>
-                  • Strapi, NoSQL, MongoDB, Docker & Three.js <br>
-                  • RegEx, Jest, pgadmin, Sqitch, joi, Swagger, Winston <br>
-                  • graphql, Apollo server, Websockets <br>
-                  • Projet d’Application Web Mobile de Planification de repas <br>
-                </p>
+              <section class="cards_section" id="education">
+              <div class="card" id="Formation Oclock">
+                <div class="content">
+                  <p class="heading" id="title_of_training">Formation Développeur Web Full Stack <em>(JavaScript & Node.js)</em></p>
+              <section class="information__section">
+                  <p class="date">Juin 2023 — Novembre 2023<br></p>
+                  <a onclick="window.open('https://oclock.io/formations/developpeur-web-fullstack-javascript', '_blank')">
+                    <p class="school">École Tech O'clock</p>
+                  </a><br>
+                  <div class="skills__section">
+                    <ul class="skills">
+                    <li>HTML & CSS</li>
+                    <li>JavaScript Vanilla, Node.js & Express.js</li>
+                    <li>postgresql, SQL & Sequelize, database : MCD, MLD & POO </li>
+                    <li>API REST, CRUD & Introduction à la Cybersécurité </li>
+                    <li>Strapi, NoSQL, MongoDB, Docker & Three.js</li>
+                    <li>RegEx, Jest, pgadmin, Sqitch, joi, Swagger, Winston</li>
+                    <li>graphql, Apollo server, Websockets</li> 
+                    <li>Projet d’Application Web Mobile de Planification de repas</li>
+                  </ul>
+                  </div>
+              </section>
+              <button class="btn" onclick="window.open('https://oclock.io/formations/developpeur-web-fullstack-javascript', '_blank')">En savoir plus</button>
                 </div>
-            </section>
-            <button class="btn" onclick="window.open('https://oclock.io/formations/developpeur-web-fullstack-javascript', '_blank')">En savoir plus</button>
               </div>
-            </div>
-
-            <div class="card">
-              <div class="content">
-                <p class="heading" id="title_of_training">Master Pro Bilingue (Anglophone) "<em>Intelligence & Innovation Culturelles</em>"</p>
-            <section class="information__section">
-                <p class="date">2016 — 2018<br></p>
-                <a onclick="window.open('https://odf.u-paris.fr/fr/offre-de-formation/master-XB/arts-lettres-langues-ALL/langues-litteratures-et-civilisations-etrangeres-et-regionales-etudes-anglophones-K2VO577S/master-langues-litteratures-et-civilisations-etrangeres-et-regionales-parcours-etudes-anglophones-intelligence-et-innovation-culturelles-JRQKZU1O.html', '_blank')">
-                  <p class="school">Université Paris 7 Denis Diderot</p>
-                </a><br>
-                <div class="skills__section">
-                  <p class="skills">
-                    • Communication & Marketing <br>
-                    • Langue Anglaise & Culture Anglophone <br>
-                    • Capacités Analytique & Sémiologique <br>
-                </p>
+              <div class="card" id="Master IIC">
+                <div class="content">
+                  <p class="heading" id="title_of_training">Master Pro Bilingue (Anglophone) "<em>Intelligence & Innovation Culturelles</em>"</p>
+              <section class="information__section">
+                  <p class="date">2016 — 2018<br></p>
+                  <a onclick="window.open('https://odf.u-paris.fr/fr/offre-de-formation/master-XB/arts-lettres-langues-ALL/langues-litteratures-et-civilisations-etrangeres-et-regionales-etudes-anglophones-K2VO577S/master-langues-litteratures-et-civilisations-etrangeres-et-regionales-parcours-etudes-anglophones-intelligence-et-innovation-culturelles-JRQKZU1O.html', '_blank')">
+                    <p class="school">Université Paris 7 Denis Diderot</p>
+                  </a><br>
+                  <div class="skills__section">
+                    <ul class="skills">
+                      <li>Communication & Marketing</li>
+                      <li>Langue Anglaise & Culture Anglophone</li>
+                      <li>Capacités Analytique & Sémiologique</li>
+                    </ul>
+                  </div>
+              </section>
+              <button class="btn" onclick="window.open('https://odf.u-paris.fr/fr/offre-de-formation/master-XB/arts-lettres-langues-ALL/langues-litteratures-et-civilisations-etrangeres-et-regionales-etudes-anglophones-K2VO577S/master-langues-litteratures-et-civilisations-etrangeres-et-regionales-parcours-etudes-anglophones-intelligence-et-innovation-culturelles-JRQKZU1O.html', '_blank')">
+              En savoir plus </button>
                 </div>
-            </section>
-            <button class="btn" onclick="window.open('https://odf.u-paris.fr/fr/offre-de-formation/master-XB/arts-lettres-langues-ALL/langues-litteratures-et-civilisations-etrangeres-et-regionales-etudes-anglophones-K2VO577S/master-langues-litteratures-et-civilisations-etrangeres-et-regionales-parcours-etudes-anglophones-intelligence-et-innovation-culturelles-JRQKZU1O.html', '_blank')">
-            En savoir plus </button>
               </div>
-            </div>
-
-            <div class="card">
-              <div class="content">
-                <p class="heading" id="title_of_training">Licence Littérature Civilisation Étrangère & Régionale <em>Anglais</em></p>
-            <section class="information__section">
-                <p class="date">2013 — 2016<br></p>
-                <a onclick="window.open('https://odf.u-paris.fr/fr/offre-de-formation/licence-XA/arts-lettres-langues-ALL/langues-litteratures-et-civilisations-etrangeres-et-regionales-etudes-anglophones-KL9E1Z5A/licence-langues-litteratures-civilisations-etrangeres-et-regionales-llcer-parcours-anglais-J8WS3GE9.html', '_blank')">
-                  <p class="school">Université Paris 7 Denis Diderot</p>
-                </a><br>
-                <div class="skills__section">
-                  <p class="skills">
-
-                    • Littérature & Culture Anglophone <br>
-                    • Traduction - Version Anglais - Français <br>
-                    • Expression Orale & Rédaction en Anglais <br>
-               
-                </p>
+              <div class="card" id="LLCER Anglais">
+                <div class="content">
+                  <p class="heading" id="title_of_training">Licence Littérature Civilisation Étrangère & Régionale <em>Anglais</em></p>
+              <section class="information__section">
+                  <p class="date">2013 — 2016<br></p>
+                  <a onclick="window.open('https://odf.u-paris.fr/fr/offre-de-formation/licence-XA/arts-lettres-langues-ALL/langues-litteratures-et-civilisations-etrangeres-et-regionales-etudes-anglophones-KL9E1Z5A/licence-langues-litteratures-civilisations-etrangeres-et-regionales-llcer-parcours-anglais-J8WS3GE9.html', '_blank')">
+                    <p class="school">Université Paris 7 Denis Diderot</p>
+                  </a><br>
+                  <div class="skills__section">
+                    <ul class="skills">
+                      <li>Littérature & Culture Anglophone</li>
+                      <li>Traduction - Version Anglais - Français</li>
+                      <li>Expression Orale & Rédaction en Anglais</li>
+                    </ul>
+                  </div>
+              </section>
+              <button class="btn" onclick="window.open('https://odf.u-paris.fr/fr/offre-de-formation/licence-XA/arts-lettres-langues-ALL/langues-litteratures-et-civilisations-etrangeres-et-regionales-etudes-anglophones-KL9E1Z5A/licence-langues-litteratures-civilisations-etrangeres-et-regionales-llcer-parcours-anglais-J8WS3GE9.html', '_blank')">En savoir plus</button>
                 </div>
-            </section>
-            <button class="btn" onclick="window.open('https://odf.u-paris.fr/fr/offre-de-formation/licence-XA/arts-lettres-langues-ALL/langues-litteratures-et-civilisations-etrangeres-et-regionales-etudes-anglophones-KL9E1Z5A/licence-langues-litteratures-civilisations-etrangeres-et-regionales-llcer-parcours-anglais-J8WS3GE9.html', '_blank')">En savoir plus</button>
               </div>
-            </div>
+            </section>
 
             <div class="nav">
               <div class="nav-wrapper">
@@ -132,12 +174,99 @@
                 </nav>
               </div>
             </div>
+
+            <ul class="title_section">
+              <li>
+                <input type="checkbox" />
+                <div class="letter">E</div>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <div class="letter">X</div>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <div class="letter">P</div>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <div class="letter">É</div>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <div class="letter">R</div>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <div class="letter">I</div>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <div class="letter">E</div>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <div class="letter">N</div>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <div class="letter">C</div>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <div class="letter">E</div>
+              </li>
+            </ul>
+
+            <section class="cards_section" id="experience">
+
+              <div class="card" id="shin_sekai">
+                <div class="content">
+                  <p class="heading" id="title_of_training">Community & Product <em>Manager</em></p>
+              <section class="information__section">
+                  <p class="date">Janvier 2021 — Janvier 2023<br></p>
+                  <a onclick="window.open('https://www.shin-sekai.fr/', '_blank')">
+                    <p class="school">SHIN SEKAI — site de vente de figurines en ligne</p>
+                  </a><br>
+                  <div class="skills__section">
+                    <ul class="skills">
+                    <li>Gestion des réseaux sociaux, partenariats et création de contenu</li>
+                    <li>Veille sur les nouveautés produits, culture et bests practices</li>
+                    <li>Benchmark & proposition d’améliorations</li>
+                  </ul>
+                  </div>
+              </section>
+              <button class="btn" onclick="window.open('https://oclock.io/formations/developpeur-web-fullstack-javascript', '_blank')">En savoir plus</button>
+                </div>
+              </div>
+
+              <div class="card" id="3w_academy">
+                <div class="content">
+                  <p class="heading" id="title_of_training">Marketing & Communications <em>Officer</em></p>
+              <section class="information__section">
+                  <p class="date">Mars 2018 — Décembre 2021<br></p>
+                  <a onclick="window.open('https://www.shin-sekai.fr/', '_blank')">
+                    <p class="school">3W ACADEMY — Centre de formation au métier de développeur web</p>
+                  </a><br>
+                  <div class="skills__section">
+                    <ul class="skills">
+                    <li>Gestion de la marque, des réseaux sociaux et création de contenu</li>
+                    <li>Veille concurrentielle et benchmark</li>
+                    <li>Organisation d’événements notamment de game jam</li>
+                  </ul>
+                </div>
+              </section>
+              <button class="btn" onclick="window.open('https://oclock.io/formations/developpeur-web-fullstack-javascript', '_blank')">En savoir plus</button>
+                </div>
+              </div>
+    
                 <!-- Flèche de défilement -->
   <div class="scroll-down-arrow" onclick="scrollToTop()">↑</div>
 </section>
     </main>
     
   </body>
+  <script src="/js/download_file.js"></script>
   <script src="/js/menu_burger.js"></script>
   <script src="/js/scroll_top.js"></script>
   <%- include ('partials/matrix') %> 
