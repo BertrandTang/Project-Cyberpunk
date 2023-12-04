@@ -13,6 +13,10 @@ router.get('/', (req, res) => {
     res.render('projets')
   });
 
+  router.get('/stablediffusion', (req, res) => {
+    res.render('stablediffusion')
+  });
+
   router.get('/skills', (req, res) => {
     res.render('skills')
   });

@@ -52,15 +52,28 @@
             <p id="message"> Voici les projets sur lesquels j'ai pu travailler, dans le cadre de ma formation mais également en marge de celle-ci : </p>
             <section class="projects__section">
 
-              <div class="card" onclick="window.location.href = '/contact';">
-                <img src="/img/burgerTrex.png" alt="Image 1">
-                <h3>Dino Diner</h3>
+              <div class="thumbnail">
+                <img src="/img/burgerTrex.png" alt="">
+                <div class="card__content">
+                  <p class="card__title">Dino Diner</p>
+                  <p class="card__description">Projet de fin de formation, nous voulions créer une application web mobile de planification de repas qui permet d'exporter des listes de courses selon les recettes assignées à une semaine.
+                    Le MVP permet à un utilisateur de s'inscrire,  de s'authentifier, de générer un repas par jour.</p>
+                </div>
               </div>
+  
 
-              <div class="card" onclick="window.location.href = '/contact';">
-                <img src="/img/prince_fae.png" alt="Image 2">
-                <h3>Stable Diffusion</h3>
-            </section>
+            <div class="thumbnail">
+              <img src="/img/prince_fae.png" alt="">
+              <div class="card__content">
+                <p class="card__title">Stable Diffusion</p>
+                <p class="card__description"> Les IA de génération d'images m'ont toujours intrigués et j'ai récemment franchi le pas et ai testé Stable Diffusion qui est une IA générative d'image open-source. Cliquez sur "en voir plus" pour voir quelques-unes de mes générations</p>
+                <button class="btn" onclick="window.location.href = '/stablediffusion';">
+                  En voir plus </button>
+              </div>
+            </div>
+
+          </section>
+            
 
             <div class="nav">
               <div class="nav-wrapper">
@@ -70,7 +83,7 @@
                   <button id="Github" class="button__nav" onclick="window.open('https://github.com/BertrandTang', '_blank')"><span>Github</span></button><br>
                   <button id="Profil" class="button__nav" onclick="window.location.href ='/profil';"><span>Profil</span></button><br>
                   <button id="Compétences" class="button__nav" onclick="window.location.href = '/skills';"><span>Skills</span></button><br>
-                  <button id="CV" class="button__nav" onclick="window.location.href = '#';"><span>Carrière</span></button>
+                  <button id="CV" class="button__nav" onclick="window.location.href = '/carriere';"><span>Carrière</span></button>
                 </nav>
               </div>
             </div>

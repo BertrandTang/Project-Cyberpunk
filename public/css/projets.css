@@ -338,48 +338,89 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 3rem;
 }
 
-.card{
-  width: 25%;
-  margin: 1rem;
-  text-align: center;
-  --color: #0dff00; /* the border color */
-  --border: 10px;   /* the border thickness*/
-  --offset: 15px;   /* control the offset*/
-  --gap: 5px;       /* the gap on hover */
-  
-  --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)),var(--color) 0;
-  --_o: calc(3*var(--offset));
-  padding: 
-    calc(var(--gap) + var(--border))
-    calc(var(--gap) + var(--border) + var(--offset))
-    calc(var(--gap) + var(--border) + var(--offset))
-    calc(var(--gap) + var(--border));
-  background: 
-    linear-gradient(      var(--_c)) var(--_o) var(--_o), 
-    linear-gradient(90deg,var(--_c)) var(--_o) var(--_o);
-  background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
-  background-repeat: no-repeat;
-  filter: grayscale(.8);
-  transition: .5s;
-  cursor: pointer;
+.thumbnail {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  background-color: #757575;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #0dff00;
+  margin: 1.5rem 2rem 1.5rem 2rem;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.card:hover {
-  background-position: 0px 0px;
-  background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
-  filter: grayscale(0);
+.thumbnail img {
+  width: 300px;
+  fill: #757575;
+  transform: translateX(30px);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.card img {
+.card__title {
+  margin: 0.5rem;
+  font-size: 1rem;
+  color: black;
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 0rem 0rem 1rem 0rem;
+  font-size: 0.7rem;
+  color: black;
+  line-height: 1.4;
+  padding: 0rem 0.5rem;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
+  padding: 5px 8px;
+  box-sizing: border-box;
+  background-color: #a19ea1;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.card h3 {
-  padding: 1rem;
+.card__content .btn {
+  color: #5b595b;
+  text-decoration: none;
+  padding: 0.5rem 0.8rem;
+  margin: 0rem 0rem 2rem 1.3rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: #0dff00;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
+
+.thumbnail:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+
+.thumbnail:hover img {
+  scale: 0;
+}
+
+
 
 .scroll-down-arrow {
   position: fixed;
@@ -610,7 +651,7 @@ footer {
   font-size: 1rem;
   text-align: center;
   position: absolute;
-  top: 95%;
+  top: 93%;
   left: 50%;
   transform: translateX(-50%);
   width: auto;
@@ -620,13 +661,8 @@ footer {
 /* Styles pour les écrans de 767 pixels de largeur ou moins (portrait) */
 @media only screen and (max-width: 767px) {
 
-  .card{
-    width: 100%;
-    margin-bottom: 4rem;
-    --offset: 12px;   /* control the offset*/
-  }
 
-    .button__nav{
+  .button__nav{
     font-size: 0.8rem;
     margin: 1rem 0rem;
   }
@@ -638,7 +674,7 @@ footer {
   #logo {
     top: 2%;
     left: 2%;
-    height: 75px;
+    height: 70px;
     position: absolute;
     z-index: 1;
   }
@@ -712,10 +748,32 @@ footer {
 /* Mobile Paysage */
 /* Styles pour les écrans entre 768 et 991 pixels de largeur (paysage) */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .card{
-    width: 40%;
-    margin-bottom: 5rem;
-    --offset: 12px;   /* control the offset*/
+
+  .thumbnail {
+    width: 300px;
+    height: 250px;
+  }
+  
+  .thumbnail img {
+    width: 300px;
+    transform: translateX(0px);
+  }
+  
+  .card__title {
+    margin: 1rem;
+    font-size: 2rem;
+  }
+  
+  .card__description {
+    margin: 0rem 0rem 1rem 0rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 0rem 0.5rem;
+  }
+
+  .card__content .btn {
+    padding: 0.5rem 0.8rem;
+    margin: 0rem 0rem 2rem 0.5rem;
   }
 
   .button__nav {
@@ -864,10 +922,32 @@ footer {
 /* Tablette */
 /* Styles pour les écrans entre 992 et 1199 pixels de largeur (tablettes) */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .card{
-    width: 40%;
-    margin-bottom: 5rem;
-    --offset: 12px;   /* control the offset*/
+
+  .thumbnail {
+    width: 300px;
+    height: 250px;
+  }
+  
+  .thumbnail img {
+    width: 300px;
+    transform: translateX(0px);
+  }
+  
+  .card__title {
+    margin: 1rem;
+    font-size: 2rem;
+  }
+  
+  .card__description {
+    margin: 0rem 0rem 1rem 0rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 0rem 0.5rem;
+  }
+
+  .card__content .btn {
+    padding: 0.5rem 0.8rem;
+    margin: 0rem 0rem 2rem 0.5rem;
   }
 
   .button__nav {
@@ -1020,14 +1100,33 @@ footer {
 /* Écran standard */
 /* Styles pour les écrans de 1200 pixels de largeur ou plus (écrans standard) */
 @media only screen and (min-width: 1200px) {
-  .card{
-      width: 25%;
-      margin-bottom: 5rem;
-      --offset: 12px;   /* control the offset*/
+
+  .thumbnail {
+    width: 350px;
+    height: 300px;
+  }
+  
+  .thumbnail img {
+    width: 400px;
+    transform: translateY(20px);
+  }
+  
+  .card__title {
+    margin: 1.4rem;
+    font-size: 2rem;
+  }
+  
+  .card__description {
+    margin: 0rem 0rem 1rem 0rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    padding: 0rem 1rem;
   }
 
-  .card h3 {
-    line-height: 2.5rem;
+  .card__content .btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    margin: 0rem 0rem 2rem 0.5rem;
   }
 
   .button__nav {
@@ -1093,18 +1192,6 @@ footer {
     width: 100%;
     overflow-y: auto;
     height: 100%;
-  }
-
-  #buttons_section {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-  }
-
-  #buttons_section li {
-    text-align: center;
-    width: 50%;
   }
 
   .button__nav {
