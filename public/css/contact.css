@@ -565,10 +565,6 @@ Nav Styles
   height: 100%;
 }
 
-.orange {
-  color: #0dff00;
-}
-
 .form-container {
   width: 100%;
   margin: 3.5rem 0rem;
@@ -664,6 +660,21 @@ Nav Styles
 .form-container .form .button-container .reset-button-container .reset-button:hover {
   background: #0dff00;
   color: #363436;
+}
+
+.send-button, .reset-button{
+  width: 100%;
+}
+
+.success-message{
+  text-align: center;
+  font-size: 0.8rem;
+  color: #0dff00;
+  padding: 0.5rem 0rem 1rem 0rem;
+}
+
+.honeypot{
+  display: none;
 }
 
 footer {
@@ -769,6 +780,13 @@ footer {
 /* Styles pour les écrans entre 768 et 991 pixels de largeur (paysage) */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
+  .success-message{
+    text-align: center;
+    font-size: 1.3rem;
+    color: #0dff00;
+    padding: 0.5rem 0rem 1rem 0rem;
+  }
+
   .button__nav {
     --font-size: 1.7rem;
     margin: 1rem 0rem;
@@ -779,7 +797,7 @@ footer {
 
   }
   .heading {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .switch {
     width: 170px;
@@ -822,12 +840,22 @@ footer {
     bottom: 5.3rem;
     right: 6.4rem;
   }
+
+  .send-button, .reset-button{
+    font-size: 1.2rem;
+  }
 }
 
 /* Tablette */
 /* Styles pour les écrans entre 992 et 1199 pixels de largeur (tablettes) */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
 
+  .success-message{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #0dff00;
+    padding: 0.5rem 0rem 1rem 0rem;
+  }
 
   .button__nav {
     --btn-default-bg: rgb(41, 41, 41);
@@ -836,13 +864,12 @@ footer {
     margin: 1rem 3rem;
   }
   
-
   .form-container {
     margin: 3rem 0rem 5rem 0rem;
 
   }
   .heading {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .switch {
@@ -886,10 +913,21 @@ footer {
     bottom: 5.6rem;
     right: 8.3rem;
   }
+
+  .send-button, .reset-button{
+    font-size: 1.4rem;
+  }
 }
 /* Écran standard */
 /* Styles pour les écrans de 1200 pixels de largeur ou plus (écrans standard) */
 @media only screen and (min-width: 1200px) {
+
+  .success-message{
+    text-align: center;
+    font-size: 1.7rem;
+    color: #0dff00;
+    padding: 0.5rem 0rem 1rem 0rem;
+  }
 
   .button__nav {
     --btn-default-bg: rgb(41, 41, 41);
@@ -903,14 +941,14 @@ footer {
 
   }
   .heading {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .switch {
     width: 170px;
     height: 135px;
     perspective: 400px;
-    left:43%;
+    left:41%;
   }
 
   .switch .characters {
@@ -947,5 +985,9 @@ footer {
   .scroll-down-arrow {
     bottom: 5.6rem;
     right: 8.3rem;
+  }
+
+  .send-button, .reset-button{
+    font-size: 1.5rem;
   }
 }

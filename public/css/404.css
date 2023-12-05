@@ -1,0 +1,756 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Style du logo du site */
+#logo {
+  top: 2%;
+  left: 2%;
+  height: 75px;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Styles de la fenêtre interface */
+#window__outer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -70px;
+  height: 120%;
+  width: 100%;
+}
+.window {
+  width: 80%;
+  height: 65%;
+  margin: auto;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #5b595b;
+  border: 3px solid #80ab8d;
+  position: relative;
+}
+.window-title-bar {
+  background-color: rgba(62, 165, 46, 0.8);
+  height: 2.5rem;
+  color: #fff;
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.window-title {
+  height: 100%;
+  width: 50%;
+  padding: 0rem 0.1rem;
+  margin: 0.1rem;
+  font-size: 0.9rem;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.1rem;
+  float: left;
+}
+.window-buttons {
+  margin: 0.2rem;
+  float: right;
+}
+.window-button {
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 100px;
+  margin-left: 1rem;
+  border: 0.5px solid rgb(42, 42, 42);
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  transition: 90ms;
+}
+.window-content {
+  text-align: justify;
+  color: #ffffff;
+  line-height: 1.5rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+  padding: 0rem 2rem 0rem 2rem;
+  width: 100%;
+  overflow-y: auto;
+  height: 100%;
+}
+
+/* Styles pour les boutons de la barre de titre */
+.window-button.close {
+  background-color: #dc3d34;
+}
+.window-button.close:hover {
+  background-color: #ff6868;
+}
+.window-button.minimize {
+  background-color: #d0930e;
+}
+.window-button.minimize:hover {
+  background-color: #f6bf48;
+}
+.window-button.maximize {
+  background-color: #28c940;
+}
+.window-button.maximize:hover {
+  background-color: #0dff00;
+}
+
+/* Typewriter effect */
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid rgb(4, 250, 0); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0rem; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3s steps(60, end), blink-caret 0.75s step-end infinite;
+  width: auto;
+  display: inline-block;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from {
+    max-width: 0;
+  }
+
+  to {
+    max-width: 100%;
+  }
+}
+
+/* Typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: rgb(0, 255, 38);
+  }
+}
+
+/* Styles du bouton "switch" du menu */
+.switch {
+  display: block;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2), 0 0 1px 2px black,
+    inset 0 2px 2px -2px white, inset 0 0 2px 15px #47434c,
+    inset 0 0 2px 22px black;
+  border-radius: 5px;
+  padding: 23px 20px;
+  margin: 1rem 0rem;
+  perspective: 400px;
+  top: 20px;
+  position: relative;
+  z-index: 2;
+}
+.switch input {
+  display: none;
+}
+.switch input:checked + .button {
+  transform: translateZ(20px) rotateX(25deg);
+  box-shadow: 0 -10px 20px #ff1818;
+}
+.switch input:checked + .button .light {
+  animation: flicker 0.2s infinite 0.3s;
+}
+.switch input:checked + .button .shine {
+  opacity: 1;
+}
+.switch input:checked + .button .shadow {
+  opacity: 0;
+}
+.switch input:checked + .nav {
+  top: 0;
+  transform: scale(2);
+}
+.switch .button {
+  display: block;
+  transition: all 0.3s cubic-bezier(1, 0, 1, 1);
+  transform-origin: center center -20px;
+  transform: translateZ(20px) rotateX(-25deg);
+  transform-style: preserve-3d;
+  background-color: #9b0621;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  background: linear-gradient(
+    #980000 0%,
+    #6f0000 30%,
+    #6f0000 70%,
+    #980000 100%
+  );
+  background-repeat: no-repeat;
+}
+.switch .button::before {
+  content: "";
+  background: linear-gradient(
+        rgba(255, 255, 255, 0.8) 10%,
+        rgba(255, 255, 255, 0.3) 30%,
+        #650000 75%,
+        #320000
+      )
+      50% 50%/97% 97%,
+    #b10000;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50px;
+  transform-origin: top;
+  transform: rotateX(-90deg);
+  position: absolute;
+  top: 0;
+}
+.switch .button::after {
+  content: "";
+  background-image: linear-gradient(#650000, #320000);
+  width: 100%;
+  height: 50px;
+  transform-origin: top;
+  transform: translateY(50px) rotateX(-90deg);
+  position: absolute;
+  bottom: 0;
+  box-shadow: 0 50px 8px 0px black, 0 80px 20px 0px rgba(0, 0, 0, 0.5);
+}
+.switch .light {
+  opacity: 0;
+  animation: light-off 1s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#ffc97e, #ff1818 40%, transparent 70%);
+}
+.switch .dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(transparent 30%, rgba(101, 0, 0, 0.7) 70%);
+  background-size: 10px 10px;
+}
+.switch .characters {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 0.8rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.switch .shine {
+  transition: all 0.3s cubic-bezier(1, 0, 1, 1);
+  opacity: 0.3;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(white, transparent 3%) 50% 50%/97% 97%,
+    linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        transparent 50%,
+        transparent 80%,
+        rgba(255, 255, 255, 0.5)
+      )
+      50% 50%/97% 97%;
+  background-repeat: no-repeat;
+}
+.switch .shadow {
+  transition: all 0.3s cubic-bezier(1, 0, 1, 1);
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent 70%, rgba(0, 0, 0, 0.8));
+  background-repeat: no-repeat;
+}
+
+/* Flickering Effect */
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Light-Off Effect */
+@keyframes light-off {
+  0% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+  }
+}
+
+/* Styles du titre et du sous-titre de la page*/
+#error_title {
+  text-align: center;
+  font-size: 3.5rem;
+  line-height: 5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+#message {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+  padding-bottom: 4rem;
+}
+em {
+  color: #0dff00;
+}
+
+/* Styles de #error_title pour l'effet de glitch*/
+.glitch {
+  position: relative;
+  font-weight: bold;
+  color: #ffffff;
+  word-spacing: 1rem;
+  letter-spacing: 5px;
+  z-index: 1;
+}
+.glitch:before,
+.glitch:after {
+  display: block;
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+.glitch:before {
+  animation: glitch-it 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: #0dff00;
+  z-index: -1;
+}
+.glitch:after {
+  animation: glitch-it 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both
+    infinite;
+  color: #993aff;
+  z-index: -2;
+}
+
+/* Glitch Effect*/
+@keyframes glitch-it {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-3px, 3px);
+  }
+  40% {
+    transform: translate(-3px, -3px);
+  }
+  60% {
+    transform: translate(3px, 3px);
+  }
+  80% {
+    transform: translate(3px, -3px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+
+/* Styles de la fenêtre avec les boutons de navigations */
+.nav {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0px;
+  background-color: rgba(62, 165, 46, 0.8);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  transform: scale(
+    0
+  ); /* La fenêtre de navigation est cachée mais réapparaît au checked du switch 0 -> 1 */
+  z-index: 1;
+  text-align: right;
+  padding-right: 20px;
+}
+
+/* Styles des boutons de navigations */
+.button__nav {
+  --btn-default-bg: rgb(41, 41, 41);
+  --btn-hover-bg: rgb(41, 41, 41);
+  --btn-transition: 0.3s;
+  --btn-letter-spacing: 0.3rem;
+  --btn-animation-duration: 1.2s;
+  --btn-shadow-color: rgba(0, 0, 0, 0.137);
+  --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+  --hover-btn-color: #993aff;
+  --font-size: 0.8rem;
+  /* 👆 this field should not be empty */
+  --font-weight: 600;
+  --font-family: "Nova Square", sans-serif;
+  /* 👆 this field should not be empty */
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 1rem;
+  margin: 1rem 0rem;
+  border-radius: 30px 0px 30px 0px;
+  border: none;
+  justify-content: center;
+  color: #0dff00;
+  font: var(--font-weight) var(--font-size) var(--font-family);
+  background: var(--btn-default-bg);
+  cursor: pointer;
+  transition: var(--btn-transition);
+  box-shadow: var(--btn-shadow);
+  overflow: hidden;
+}
+.button__nav span {
+  letter-spacing: var(--btn-letter-spacing);
+  transition: var(--btn-transition);
+  box-sizing: border-box;
+  position: relative;
+  background: inherit;
+}
+.button__nav span::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  background: inherit;
+}
+.button__nav:hover,
+.button__nav:focus {
+  border-radius: 40px;
+  background: var(--btn-hover-bg);
+}
+.button__nav:hover span,
+.button__nav:focus span {
+  color: var(--hover-btn-color);
+}
+.button__nav:hover span::before,
+.button__nav:focus span::before {
+  animation: chitchat linear both var(--btn-animation-duration);
+}
+
+/* Chichat Effect */
+@keyframes chitchat {
+  0% {
+    content: "#";
+  }
+
+  5% {
+    content: ".";
+  }
+
+  10% {
+    content: "^{";
+  }
+
+  15% {
+    content: "-!";
+  }
+
+  20% {
+    content: "#$_";
+  }
+
+  25% {
+    content: "№:0";
+  }
+
+  30% {
+    content: "#{+.";}35%{content: "@}-?";
+  }
+
+  40% {
+    content: "?{4@%";
+  }
+
+  45% {
+    content: "=.,^!";
+  }
+
+  50% {
+    content: "?2@%";
+  }
+
+  55% {
+    content: "\;1}]";
+  }
+
+  60% {
+    content: "?{%:%";
+    right: 0;
+  }
+
+  65% {
+    content: "|{f[4";
+    right: 0;
+  }
+
+  70% {
+    content: "{4%0%";
+    right: 0;
+  }
+
+  75% {
+    content: "'1_0<";
+    right: 0;
+  }
+
+  80% {
+    content: "{0%";
+    right: 0;
+  }
+
+  85% {
+    content: "]>'";
+    right: 0;
+  }
+
+  90% {
+    content: "4";
+    right: 0;
+  }
+
+  95% {
+    content: "2";
+    right: 0;
+  }
+
+  100% {
+    content: "";
+    right: 0;
+  }
+}
+
+/* Styles pour la barre de défilement */
+/* Pour les navigateurs WebKit (comme Chrome et Safari) */
+.window-content::-webkit-scrollbar {
+  width: 8px;
+}
+.window-content::-webkit-scrollbar-thumb {
+  background-color: #4caf50;
+}
+
+/* Pour les navigateurs Firefox */
+.window-content.scrollbar {
+  width: 8px;
+}
+.window-content.scrollbar-thumb {
+  background-color: #4caf50;
+}
+
+/* Style du footer */
+footer {
+  color: black;
+  font-size: 1rem;
+  text-align: center;
+  position: absolute;
+  top: 93%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+}
+
+/* Développement en Mobile First : Mobile Portrait ⬆️⬆️⬆️*/
+/* Styles pour les écrans de 767 pixels de largeur ou moins (portrait) */
+
+/* Mobile Paysage */
+/* Styles pour les écrans entre 768 et 991 pixels de largeur (paysage) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .window-title {
+    padding-top: 0.4rem;
+    font-size: 1rem;
+  }
+  #logo {
+    height: 75px;
+  }
+  #error_title {
+    margin-top: 6rem;
+    font-size: 6rem;
+  }
+  @keyframes glitch-it {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-5px, 5px);
+    }
+    40% {
+      transform: translate(-5px, -5px);
+    }
+    60% {
+      transform: translate(5px, 5px);
+    }
+    80% {
+      transform: translate(5px, -5px);
+    }
+    to {
+      transform: translate(0);
+    }
+  }
+  #message {
+    font-size: 1.8rem;
+    padding: 2.5rem;
+  }
+  .switch {
+    width: 170px;
+    height: 110px;
+    padding: 23px 20px;
+  }
+  .switch .characters {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  .button__nav {
+    --font-size: 1.8rem;
+    margin: 1.3rem 0rem;
+  }
+  footer{
+    top: 95%;
+  }
+}
+
+/* Tablette */
+/* Styles pour les écrans entre 992 et 1199 pixels de largeur (tablettes) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .window-title {
+    padding-top: 0.4rem;
+    font-size: 1rem;
+  }
+  #logo {
+    height: 75px;
+  }
+  #error_title {
+    margin-top: 4rem;
+    font-size: 7rem;
+    line-height: 7rem;
+  }
+  @keyframes glitch-it {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-5px, 5px);
+    }
+    40% {
+      transform: translate(-5px, -5px);
+    }
+    60% {
+      transform: translate(5px, 5px);
+    }
+    80% {
+      transform: translate(5px, -5px);
+    }
+    to {
+      transform: translate(0);
+    }
+  }
+  #message {
+    font-size: 1.8rem;
+    padding: 2.5rem;
+  }
+  .button__nav {
+    --font-size: 1.8rem;
+    margin: 1.3rem 0rem;
+  }
+  #message {
+    font-size: 1.7rem;
+    padding-bottom: 4rem;
+  }
+  .switch {
+    width: 170px;
+    height: 115px;
+    padding: 20px;
+    margin: 15px 0px;
+    perspective: 400px;
+    padding: 23px 20px;
+    left: 40%;
+  }
+  .switch .characters {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  footer{
+    top: 95%;
+  }
+}
+/* Écran standard */
+/* Styles pour les écrans de 1200 pixels de largeur ou plus (écrans standard) */
+@media only screen and (min-width: 1200px) {
+    .window-title {
+        padding-top: 0.4rem;
+        font-size: 1rem;
+      }
+      #logo {
+        height: 95px;
+      }
+      .window-content{
+        padding: 1.2rem;
+      }
+      #error_title {
+        width: 100%;
+        margin-top: 3rem;
+        font-size: 13rem;
+        line-height: 11rem;
+      }
+      @keyframes glitch-it {
+        0% {
+          transform: translate(0);
+        }
+        20% {
+          transform: translate(-5px, 5px);
+        }
+        40% {
+          transform: translate(-5px, -5px);
+        }
+        60% {
+          transform: translate(5px, 5px);
+        }
+        80% {
+          transform: translate(5px, -5px);
+        }
+        to {
+          transform: translate(0);
+        }
+      }
+      #message {
+        font-size: 2.6rem;
+        line-height: 2.2rem;
+        padding: 2rem 0rem 4rem 0rem;
+      }
+      .button__nav {
+        --font-size: 2rem;
+        margin: 1.4rem 0rem;
+      }
+
+      .switch {
+        width: 170px;
+        height: 115px;
+        padding: 20px;
+        margin: 10px 0px;
+        perspective: 400px;
+        padding: 23px 20px;
+        left: 41%;
+      }
+      .switch .characters {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+      }
+      footer{
+        top: 95%;
+      }
+}
+

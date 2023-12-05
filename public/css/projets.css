@@ -130,7 +130,6 @@ h1 {
   margin: 1rem 0rem;
 }
 
-
 .button__nav span {
   letter-spacing: var(--btn-letter-spacing);
   transition: var(--btn-transition);
@@ -1101,6 +1100,7 @@ footer {
 /* Styles pour les écrans de 1200 pixels de largeur ou plus (écrans standard) */
 @media only screen and (min-width: 1200px) {
 
+
   .thumbnail {
     width: 350px;
     height: 300px;
@@ -1204,7 +1204,8 @@ footer {
     --btn-shadow-color: rgba(0, 0, 0, 0.137);
     --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
     --hover-btn-color: rgb(255, 0, 149);
-    --font-size: 2rem;
+    --font-size: 2.5rem;
+    margin: 1.6rem 3rem;
     /* 👆 this field should not be empty */
     --font-weight: 600;
     --font-family: Menlo, Roboto Mono, monospace;

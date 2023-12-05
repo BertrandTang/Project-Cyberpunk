@@ -964,6 +964,8 @@ Nav Styles
     --font-weight: 600;
     --font-family: Menlo, Roboto Mono, monospace;
     /* 👆 this field should not be empty */
+    --font-size: 2.5rem;
+    margin: 1.6rem 3rem;
   }
 
   .window-title {

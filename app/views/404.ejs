@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="/css/contact.css" />
+    <link rel="stylesheet" type="text/css" href="/css/404.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"  />
 
-    <title>Contact ✉️</title>
+    <title>⚠️ 404 ⚠️</title>
   </head>
 
   <body>
@@ -22,13 +22,14 @@
       <a href="/">
         <img id="logo" src="/img/logo_long.png" alt="">
       </a>
+
       <section id="window__outer">
         <section class="window">
           <div class="window-title-bar">
-            <h1 class="window-title"> Call Me Maybe ? ☎️</h1>
-            <div class="window-buttons">
+            <h1 class="window-title">Page 404 Not Found ⚠️</h1>
+             <div class="window-buttons">
               <a
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                href="https://youtu.be/dQw4w9WgXcQ"
                 target="_blank"
                 ><button class="window-button maximize"></button
               ></a>
@@ -49,51 +50,26 @@
             </div>
             </label>
 
-            
-<div class="form-container">
-  <form class="form" action="/contact" method="post">
-      <h2 class="heading"> Vous avez trouvé un bug ? Une coquille ou simplement pour avoir plus d'information sur mon profil ? <br> C'est par ici :</h2>
-      <% if (successMessage) { %>
-        <div class="success-message">
-          <%= successMessage %>
-        </div>
-      <% } %>
-      <input placeholder="Nom, Prénom" type="text" class="input" name="name" required>
-      <input placeholder="Votre Email" id="mail" type="email" class="input" name="email" required>
-      <textarea placeholder="Dites bonjour !" rows="10" cols="30" id="message" name="message" class="textarea"></textarea>
-      <div class="honeypot">
-        <label for="honeypot">Ne pas remplir ce champ</label>
-        <input placeholder="Ne pas remplir" type="text" id="honeypot" name="honeypot" />
-      </div>
-      <div class="button-container">
-      <button type="submit" class="send-button">Envoyer</button>
-      <div class="reset-button-container">
-          <button type="reset" id="reset-btn" class="reset-button">Effacer</button>
-      </div>
-    </div>
-  </form>
-</div>
+              <div id="error_title" class="glitch" data-text="404 NOT FOUND">404 NOT FOUND</div>
 
-
+            <p id="message">
+              Désolé, la page que vous cherchez <em>n'existe pas</em>
+            </p>
             <div class="nav">
-              <div class="nav-wrapper">
                 <nav>
-                  <button id="Profil" class="button__nav" onclick="window.location.href = '/profil';"><span>Profil</span></button><br>
+                  <button id="Contact" class="button__nav" onclick="window.location.href = '/contact';"><span>Contact</span></button><br>
                   <button id="Linkedin" class="button__nav" onclick="window.open('https://www.linkedin.com/in/bertrandtang/', '_blank')"><span>Linkedin</span></button><br>
                   <button id="Github" class="button__nav" onclick="window.open('https://github.com/BertrandTang', '_blank')"><span>Github</span></button><br>
                   <button id="Projets" class="button__nav" onclick="window.location.href ='/projets';"><span>Projets</span></button><br>
                   <button id="Compétences" class="button__nav" onclick="window.location.href = '/skills';"><span>Skills</span></button><br>
                   <button id="CV" class="button__nav" onclick="window.location.href = '/carriere';"><span>Carrière</span></button>
                 </nav>
-              </div>
             </div>
-                <!-- Flèche de défilement -->
-  <div class="scroll-down-arrow" onclick="scrollToTop()">↑</div>
-      </section>
+</section>
     </main>
-    <script src="/js/menu_burger.js"></script>
-  <script src="/js/scroll_top.js"></script>
+    
+  </body>
+  <script src="/js/menu_burger.js"></script>
   <%- include ('partials/matrix') %> 
   <%- include ('partials/footer') %>
-  </body>
 </html>
