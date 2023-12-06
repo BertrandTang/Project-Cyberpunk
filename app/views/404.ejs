@@ -1,46 +1,39 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="/css/404.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"  />
 
-    <title>⚠️ 404 ⚠️</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="/css/404.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <title>⚠️ 404 ⚠️</title>
+</head>
 
-  <body>
-    <main>
-      <a href="/">
-        <img id="logo" src="/img/logo_long.png" alt="">
-      </a>
-
-      <section id="window__outer">
-        <section class="window">
-          <div class="window-title-bar">
-            <h1 class="window-title">Page 404 Not Found ⚠️</h1>
-             <div class="window-buttons">
-              <a
-                href="https://youtu.be/dQw4w9WgXcQ"
-                target="_blank"
-                ><button class="window-button maximize"></button
-              ></a>
-              <button class="window-button minimize"></button>
-              <a href="/"><button class="window-button close"></button></a>
-            </div>
+<body>
+  <main>
+    <a href="/">
+      <img id="logo" src="/img/logo_long.png" alt="">
+    </a>
+    <section id="window__outer">
+      <section class="window">
+        <div class="window-title-bar">
+          <h1 class="window-title">Page 404 Not Found ⚠️</h1>
+          <div class="window-buttons">
+            <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><button class="window-button maximize"></button></a>
+            <button class="window-button minimize"></button>
+            <a href="/"><button class="window-button close"></button></a>
           </div>
-          <section class="window-content">
-
-            <label class="switch">
-              <input id="toggle" type="checkbox">
+        </div>
+        <section class="window-content">
+          <label class="switch">
+            <input id="toggle" type="checkbox">
             <div class="button">
               <div class="light"></div>
               <div class="dots"></div>
@@ -48,28 +41,30 @@
               <div class="shine"></div>
               <div class="shadow"></div>
             </div>
-            </label>
-
-              <div id="error_title" class="glitch" data-text="404 NOT FOUND">404 NOT FOUND</div>
-
-            <p id="message">
-              Désolé, la page que vous cherchez <em>n'existe pas</em>
-            </p>
-            <div class="nav">
-                <nav>
-                  <button id="Contact" class="button__nav" onclick="window.location.href = '/contact';"><span>Contact</span></button><br>
-                  <button id="Linkedin" class="button__nav" onclick="window.open('https://www.linkedin.com/in/bertrandtang/', '_blank')"><span>Linkedin</span></button><br>
-                  <button id="Github" class="button__nav" onclick="window.open('https://github.com/BertrandTang', '_blank')"><span>Github</span></button><br>
-                  <button id="Projets" class="button__nav" onclick="window.location.href ='/projets';"><span>Projets</span></button><br>
-                  <button id="Compétences" class="button__nav" onclick="window.location.href = '/skills';"><span>Skills</span></button><br>
-                  <button id="CV" class="button__nav" onclick="window.location.href = '/carriere';"><span>Carrière</span></button>
-                </nav>
-            </div>
-</section>
-    </main>
-    
-  </body>
-  <script src="/js/menu_burger.js"></script>
-  <%- include ('partials/matrix') %> 
+          </label>
+          <div id="error_title" class="glitch" data-text="404 NOT FOUND">404 NOT FOUND</div>
+          <p id="message">
+            Désolé, la page que vous cherchez <em>n'existe pas</em>
+          </p>
+          <div class="nav">
+            <nav>
+              <button id="Contact" class="button__nav"
+                onclick="window.location.href = '/contact';"><span>Contact</span></button><br>
+              <button id="Linkedin" class="button__nav"
+                onclick="window.open('https://www.linkedin.com/in/bertrandtang/', '_blank')"><span>Linkedin</span></button><br>
+              <button id="Github" class="button__nav"
+                onclick="window.open('https://github.com/BertrandTang', '_blank')"><span>Github</span></button><br>
+              <button id="Projets" class="button__nav"
+                onclick="window.location.href ='/projets';"><span>Projets</span></button><br>
+              <button id="Compétences" class="button__nav"
+                onclick="window.location.href = '/skills';"><span>Skills</span></button><br>
+              <button id="CV" class="button__nav"
+                onclick="window.location.href = '/carriere';"><span>Carrière</span></button>
+            </nav>
+          </div>
+        </section>
+  </main>
+</body>
+<script src="/js/menu_burger.js"></script>
+<%- include ('partials/matrix') %>
   <%- include ('partials/footer') %>
-</html>
