@@ -271,7 +271,7 @@ html {
   margin-bottom: 1.5rem;
 }
 
-/* Typewriter effect sur la balise #hello */
+/* Styl de la balise #hello qui donne l'effet Typewriter */
 .typewriter {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid rgb(4, 250, 0); /* The typwriter cursor */
@@ -532,6 +532,7 @@ em {
   }
 }
 
+/* Style du footer */
 footer {
   color: black;
   font-family: 'Quicksand', sans-serif;
@@ -550,6 +551,9 @@ footer {
 /* Mobile Paysage */
 /* Styles pour les écrans entre 768 et 991 pixels de largeur (paysage) */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  #logo{
+    height: 80px;
+    }
   .window-title {
     padding-top: 0.4rem;
     font-size: 1rem;
@@ -567,9 +571,6 @@ footer {
     --font-size: 1.8rem;
     margin: 1.3rem 0rem;
   }
-  #logo{
-  height: 80px;
-  }
   #hello{
     font-size: 1.9rem;
   }
@@ -585,13 +586,12 @@ footer {
 /* Tablette */
 /* Styles pour les écrans entre 992 et 1199 pixels de largeur (tablettes) */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  
+  #logo{
+    height: 90px;
+    }
   .window-title {
     padding-top: 0.4rem;
     font-size: 1rem;
-  }
-  #logo{
-  height: 90px;
   }
   .switch {
     width: 170px;
@@ -621,13 +621,12 @@ footer {
 /* Écran standard */
 /* Styles pour les écrans de 1200 pixels de largeur ou plus (écrans standard) */
 @media only screen and (min-width: 1200px) {
-  
+  #logo{
+    height: 100px;
+    }
   .window-title {
     padding-top: 0.4rem;
     font-size: 1rem;
-  }
-  #logo{
-  height: 100px;
   }
   .switch {
     width: 170px;
