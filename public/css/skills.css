@@ -521,7 +521,7 @@ Nav Styles
   height: 100%;
 }
 
-.scroll-down-arrow {
+.scroll-up-arrow {
   position: fixed;
   bottom: 7rem;
   right: 14rem;
@@ -619,7 +619,7 @@ Nav Styles
     transition: 90ms;
   }
 
-  .scroll-down-arrow {
+  .scroll-up-arrow {
     bottom: 5.5rem;
     right: 5.5rem;
   }
@@ -758,7 +758,7 @@ Nav Styles
     font-family: "Oswald", sans-serif;
     transition: 90ms;
   }
-  .scroll-down-arrow {
+  .scroll-up-arrow {
     bottom: 5.5rem;
     right: 5.5rem;
   }
@@ -876,7 +876,7 @@ Nav Styles
     font-family: "Oswald", sans-serif;
     transition: 90ms;
   }
-  .scroll-down-arrow {
+  .scroll-up-arrow {
     bottom: 5.5rem;
     right: 5.5rem;
   }
@@ -1004,7 +1004,7 @@ Nav Styles
     transition: 90ms;
   }
 
-  .scroll-down-arrow {
+  .scroll-up-arrow {
     bottom: 5.5rem;
     right: 8.5rem;
   }

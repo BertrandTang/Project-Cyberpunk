@@ -421,7 +421,7 @@ h1 {
 
 
 
-.scroll-down-arrow {
+.scroll-up-arrow {
   position: fixed;
   bottom: 7rem;
   right: 14rem;
@@ -447,7 +447,7 @@ h1 {
   }
 }
 
-.scroll-down-arrow:hover {
+.scroll-up-arrow:hover {
   animation: bounce 0.8s infinite;
 }
 
@@ -735,7 +735,7 @@ footer {
     font-family: "Oswald", sans-serif;
     transition: 90ms;
   }
-  .scroll-down-arrow {
+  .scroll-up-arrow {
     bottom: 5.5rem;
     right: 5.5rem;
   }
@@ -909,7 +909,7 @@ footer {
     font-family: "Oswald", sans-serif;
     transition: 90ms;
   }
-  .scroll-down-arrow {
+  .scroll-up-arrow {
     bottom: 5.5rem;
     right: 5.5rem;
   }
@@ -1087,7 +1087,7 @@ footer {
     font-family: "Oswald", sans-serif;
     transition: 90ms;
   }
-  .scroll-down-arrow {
+  .scroll-up-arrow {
     bottom: 5.5rem;
     right: 5.5rem;
   }
@@ -1254,7 +1254,7 @@ footer {
     font-family: "Oswald", sans-serif;
     transition: 90ms;
   }
-  .scroll-down-arrow {
+  .scroll-up-arrow {
     bottom: 5.5rem;
     right: 8.5rem;
   }

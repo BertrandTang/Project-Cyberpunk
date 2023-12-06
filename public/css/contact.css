@@ -56,7 +56,7 @@ body {
 .window-title {
   font-size: 1rem;
   margin: 0.35rem;
-  font-family: "Oswald", sans-serif;
+  font-family: "Quicksand", sans-serif;
   letter-spacing: 0.3rem;
   float: left;
 }
@@ -337,7 +337,7 @@ em {
   background-color: #4caf50;
 }
 
-.scroll-down-arrow {
+.scroll-up-arrow {
   position: fixed;
   bottom: 7rem;
   right: 14rem;
@@ -369,7 +369,7 @@ em {
   }
 }
 
-.scroll-down-arrow:hover {
+.scroll-up-arrow:hover {
   animation: bounce 0.8s infinite;
 }
 
@@ -770,7 +770,7 @@ footer {
     transition: 90ms;
   }
 
-  .scroll-down-arrow {
+  .scroll-up-arrow {
     bottom: 5.5rem;
     right: 5.5rem;
   }
@@ -836,7 +836,7 @@ footer {
     height: 100%;
   }
 
-  .scroll-down-arrow {
+  .scroll-up-arrow {
     bottom: 5.3rem;
     right: 6.4rem;
   }
@@ -909,7 +909,7 @@ footer {
     padding: 0rem 4rem 0rem 4rem;
   }
 
-  .scroll-down-arrow {
+  .scroll-up-arrow {
     bottom: 5.6rem;
     right: 8.3rem;
   }
@@ -982,7 +982,7 @@ footer {
     padding: 0rem 8rem 0rem 8rem;
   }
 
-  .scroll-down-arrow {
+  .scroll-up-arrow {
     bottom: 5.6rem;
     right: 8.3rem;
   }

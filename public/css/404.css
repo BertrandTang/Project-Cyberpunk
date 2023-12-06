@@ -55,7 +55,7 @@ html {
   padding: 0rem 0.1rem;
   margin: 0.1rem;
   font-size: 0.9rem;
-  font-family: "Oswald", sans-serif;
+  font-family: "Quicksand", sans-serif;
   letter-spacing: 0.1rem;
   float: left;
 }
@@ -274,102 +274,6 @@ html {
   background-repeat: no-repeat;
 }
 
-/* Flickering Effect */
-@keyframes flicker {
-  0% {
-    opacity: 1;
-  }
-
-  80% {
-    opacity: 0.8;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Light-Off Effect */
-@keyframes light-off {
-  0% {
-    opacity: 1;
-  }
-
-  80% {
-    opacity: 0;
-  }
-}
-
-/* Styles du titre et du sous-titre de la page*/
-#error_title {
-  text-align: center;
-  font-size: 3.5rem;
-  line-height: 5rem;
-  margin-top: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-#message {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  text-align: center;
-  padding-bottom: 4rem;
-}
-em {
-  color: #0dff00;
-}
-
-/* Styles de #error_title pour l'effet de glitch*/
-.glitch {
-  position: relative;
-  font-weight: bold;
-  color: #ffffff;
-  word-spacing: 1rem;
-  letter-spacing: 5px;
-  z-index: 1;
-}
-.glitch:before,
-.glitch:after {
-  display: block;
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.8;
-}
-.glitch:before {
-  animation: glitch-it 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
-  color: #0dff00;
-  z-index: -1;
-}
-.glitch:after {
-  animation: glitch-it 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both
-    infinite;
-  color: #993aff;
-  z-index: -2;
-}
-
-/* Glitch Effect*/
-@keyframes glitch-it {
-  0% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(-3px, 3px);
-  }
-  40% {
-    transform: translate(-3px, -3px);
-  }
-  60% {
-    transform: translate(3px, 3px);
-  }
-  80% {
-    transform: translate(3px, -3px);
-  }
-  to {
-    transform: translate(0);
-  }
-}
-
 /* Styles de la fenêtre avec les boutons de navigations */
 .nav {
   position: absolute;
@@ -536,6 +440,101 @@ em {
     right: 0;
   }
 }
+/* Flickering Effect */
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Light-Off Effect */
+@keyframes light-off {
+  0% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+  }
+}
+
+/* Styles du titre et du sous-titre de la page */
+#error_title {
+  text-align: center;
+  font-size: 3.5rem;
+  line-height: 5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+#message {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+  padding-bottom: 4rem;
+}
+em {
+  color: #0dff00;
+}
+
+/* Styles de #error_title pour l'effet de glitch */
+.glitch {
+  position: relative;
+  font-weight: bold;
+  color: #ffffff;
+  word-spacing: 1rem;
+  letter-spacing: 5px;
+  z-index: 1;
+}
+.glitch:before,
+.glitch:after {
+  display: block;
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+.glitch:before {
+  animation: glitch-it 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: #0dff00;
+  z-index: -1;
+}
+.glitch:after {
+  animation: glitch-it 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both
+    infinite;
+  color: #993aff;
+  z-index: -2;
+}
+
+/* Glitch Effect */
+@keyframes glitch-it {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-3px, 3px);
+  }
+  40% {
+    transform: translate(-3px, -3px);
+  }
+  60% {
+    transform: translate(3px, 3px);
+  }
+  80% {
+    transform: translate(3px, -3px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
 
 /* Styles pour la barre de défilement */
 /* Pour les navigateurs WebKit (comme Chrome et Safari) */
@@ -557,7 +556,7 @@ em {
 /* Style du footer */
 footer {
   color: black;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 1.1rem;
   text-align: center;
   position: absolute;
@@ -579,6 +578,19 @@ footer {
   }
   #logo {
     height: 75px;
+  }
+  .switch {
+    width: 170px;
+    height: 110px;
+    padding: 23px 20px;
+  }
+  .switch .characters {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  .button__nav {
+    --font-size: 1.8rem;
+    margin: 1.3rem 0rem;
   }
   #error_title {
     margin-top: 6rem;
@@ -608,24 +620,7 @@ footer {
     font-size: 1.8rem;
     padding: 2.5rem;
   }
-  .switch {
-    width: 170px;
-    height: 110px;
-    padding: 23px 20px;
-  }
-  .switch .characters {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-  }
-  .button__nav {
-    --font-size: 1.8rem;
-    margin: 1.3rem 0rem;
-  }
-  footer{
-    top: 95%;
-  }
 }
-
 /* Tablette */
 /* Styles pour les écrans entre 992 et 1199 pixels de largeur (tablettes) */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -634,7 +629,24 @@ footer {
     font-size: 1rem;
   }
   #logo {
-    height: 75px;
+    height: 90px;
+  }
+  .switch {
+    width: 170px;
+    height: 115px;
+    padding: 20px;
+    margin: 15px 0px;
+    perspective: 400px;
+    padding: 23px 20px;
+    left: 40%;
+  }
+  .switch .characters {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  .button__nav {
+    --font-size: 1.8rem;
+    margin: 1.3rem 0rem;
   }
   #error_title {
     margin-top: 4rem;
@@ -662,98 +674,69 @@ footer {
     }
   }
   #message {
-    font-size: 1.8rem;
-    padding: 2.5rem;
-  }
-  .button__nav {
-    --font-size: 1.8rem;
-    margin: 1.3rem 0rem;
-  }
-  #message {
     font-size: 1.7rem;
     padding-bottom: 4rem;
-  }
-  .switch {
-    width: 170px;
-    height: 115px;
-    padding: 20px;
-    margin: 15px 0px;
-    perspective: 400px;
-    padding: 23px 20px;
-    left: 40%;
-  }
-  .switch .characters {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-  }
-  footer{
-    top: 95%;
   }
 }
 /* Écran standard */
 /* Styles pour les écrans de 1200 pixels de largeur ou plus (écrans standard) */
 @media only screen and (min-width: 1200px) {
-    .window-title {
-        padding-top: 0.4rem;
-        font-size: 1rem;
-      }
-      #logo {
-        height: 95px;
-      }
-      .window-content{
-        padding: 1.2rem;
-      }
-      #error_title {
-        width: 100%;
-        margin-top: 3rem;
-        font-size: 13rem;
-        line-height: 11rem;
-      }
-      @keyframes glitch-it {
-        0% {
-          transform: translate(0);
-        }
-        20% {
-          transform: translate(-5px, 5px);
-        }
-        40% {
-          transform: translate(-5px, -5px);
-        }
-        60% {
-          transform: translate(5px, 5px);
-        }
-        80% {
-          transform: translate(5px, -5px);
-        }
-        to {
-          transform: translate(0);
-        }
-      }
-      #message {
-        font-size: 2.6rem;
-        line-height: 2.2rem;
-        padding: 2rem 0rem 4rem 0rem;
-      }
-      .button__nav {
-        --font-size: 2rem;
-        margin: 1.4rem 0rem;
-      }
-
-      .switch {
-        width: 170px;
-        height: 115px;
-        padding: 20px;
-        margin: 10px 0px;
-        perspective: 400px;
-        padding: 23px 20px;
-        left: 41%;
-      }
-      .switch .characters {
-        margin-top: 1rem;
-        font-size: 1.5rem;
-      }
-      footer{
-        top: 95%;
-      }
+  #logo {
+    height: 95px;
+  }
+  .window-title {
+    padding-top: 0.4rem;
+    font-size: 1rem;
+  }
+  .window-content {
+    padding: 1.2rem;
+  }
+  .switch {
+    width: 170px;
+    height: 115px;
+    padding: 20px;
+    margin: 10px 0px;
+    perspective: 400px;
+    padding: 23px 20px;
+    left: 41%;
+  }
+  .switch .characters {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  .button__nav {
+    --font-size: 2rem;
+    margin: 1.4rem 0rem;
+  }
+  #error_title {
+    width: 100%;
+    margin-top: 3rem;
+    font-size: 13rem;
+    line-height: 11rem;
+  }
+  @keyframes glitch-it {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-5px, 5px);
+    }
+    40% {
+      transform: translate(-5px, -5px);
+    }
+    60% {
+      transform: translate(5px, 5px);
+    }
+    80% {
+      transform: translate(5px, -5px);
+    }
+    to {
+      transform: translate(0);
+    }
+  }
+  #message {
+    font-size: 2.6rem;
+    line-height: 2.2rem;
+    padding: 2rem 0rem 4rem 0rem;
+  }
 }
-
