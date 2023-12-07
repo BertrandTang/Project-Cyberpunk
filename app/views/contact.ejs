@@ -1,45 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="/css/contact.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"  />
 
-    <title>Contact ✉️</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="/css/contact.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>Contact ✉️</title>
+</head>
 
-  <body>
-    <main>
-      <a href="/">
-        <img id="logo" src="/img/logo_long.png" alt="">
-      </a>
-      <section id="window__outer">
-        <section class="window">
-          <div class="window-title-bar">
-            <h1 class="window-title"> Call Me Maybe ? ☎️</h1>
-            <div class="window-buttons">
-              <a
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                target="_blank"
-                ><button class="window-button maximize"></button
-              ></a>
-              <button class="window-button minimize"></button>
-              <a href="/"><button class="window-button close"></button></a>
-            </div>
+<body>
+  <main>
+      <img id="logo" src="/img/logo_long.png" alt="" onclick="window.location.href ='/';">
+    <section id="window__outer">
+      <section class="window">
+        <div class="window-title-bar">
+          <h1 class="window-title"> Call Me Maybe ? ☎️</h1>
+          <div class="window-buttons">
+            <button class="window-button maximize" onclick="window.open('https://youtu.be/dQw4w9WgXcQ', '_blank')"></button>
+            <button class="window-button minimize"></button>
+            <button class="window-button close" onclick="window.location.href ='/';"></button>
           </div>
-          <section class="window-content">
-
-            <label class="switch">
-              <input id="toggle" type="checkbox">
+        </div>
+        <section class="window-content">
+          <label class="switch">
+            <input id="toggle" type="checkbox">
             <div class="button">
               <div class="light"></div>
               <div class="dots"></div>
@@ -47,51 +37,57 @@
               <div class="shine"></div>
               <div class="shadow"></div>
             </div>
-            </label>
-
-            
-<div class="form-container">
-  <form class="form" action="/contact" method="post">
-      <h2 class="heading"> Vous avez trouvé un bug ? Une coquille ou simplement pour avoir plus d'information sur mon profil ? <br> C'est par ici :</h2>
-      <% if (successMessage) { %>
-        <div class="success-message">
-          <%= successMessage %>
-        </div>
-      <% } %>
-      <input placeholder="Nom, Prénom" type="text" class="input" name="name" required>
-      <input placeholder="Votre Email" id="mail" type="email" class="input" name="email" required>
-      <textarea placeholder="Dites bonjour !" rows="10" cols="30" id="message" name="message" class="textarea"></textarea>
-      <div class="honeypot">
-        <label for="honeypot">Ne pas remplir ce champ</label>
-        <input placeholder="Ne pas remplir" type="text" id="honeypot" name="honeypot" />
-      </div>
-      <div class="button-container">
-      <button type="submit" class="send-button">Envoyer</button>
-      <div class="reset-button-container">
-          <button type="reset" id="reset-btn" class="reset-button">Effacer</button>
-      </div>
-    </div>
-  </form>
-</div>
-
-
-            <div class="nav">
-                <nav>
-                  <button id="Profil" class="button__nav" onclick="window.location.href = '/profil';"><span>Profil</span></button><br>
-                  <button id="Linkedin" class="button__nav" onclick="window.open('https://www.linkedin.com/in/bertrandtang/', '_blank')"><span>Linkedin</span></button><br>
-                  <button id="Github" class="button__nav" onclick="window.open('https://github.com/BertrandTang', '_blank')"><span>Github</span></button><br>
-                  <button id="Projets" class="button__nav" onclick="window.location.href ='/projets';"><span>Projets</span></button><br>
-                  <button id="Compétences" class="button__nav" onclick="window.location.href = '/skills';"><span>Skills</span></button><br>
-                  <button id="CV" class="button__nav" onclick="window.location.href = '/carriere';"><span>Carrière</span></button>
-                </nav>
-            </div>
-                <!-- Flèche de défilement -->
-  <div class="scroll-up-arrow" onclick="scrollToTop()">↑</div>
-      </section>
-    </main>
-    <script src="/js/menu_burger.js"></script>
+          </label>
+          <div class="form-container">
+            <form class="form" action="/contact" method="post">
+              <h2 class="heading"> Vous avez trouvé un bug ? Une coquille ou simplement pour avoir plus d'information
+                sur mon profil ? <br> C'est par ici :</h2>
+              <% if (successMessage) { %>
+                <div class="success-message">
+                  <%= successMessage %>
+                </div>
+                <% } %>
+                  <input placeholder="Nom, Prénom" type="text" class="input" name="name" required>
+                  <input placeholder="Votre Email" id="mail" type="email" class="input" name="email" required>
+                  <textarea placeholder="Dites bonjour !" rows="10" cols="30" id="message" name="message"
+                    class="textarea"></textarea>
+                  <div class="honeypot">
+                    <label for="honeypot">Ne pas remplir ce champ</label>
+                    <input placeholder="Ne pas remplir" type="text" id="honeypot" name="honeypot" />
+                  </div>
+                  <div class="button-container">
+                    <button type="submit" class="send-button">Envoyer</button>
+                    <div class="reset-button-container">
+                      <button type="reset" id="reset-btn" class="reset-button">Effacer</button>
+                    </div>
+                  </div>
+            </form>
+          </div>
+          <div class="nav">
+            <nav>
+              <button id="Profil" class="button__nav"
+                onclick="window.location.href = '/profil';"><span>Profil</span></button><br>
+              <button id="Linkedin" class="button__nav"
+                onclick="window.open('https://www.linkedin.com/in/bertrandtang/', '_blank')"><span>Linkedin</span></button><br>
+              <button id="Github" class="button__nav"
+                onclick="window.open('https://github.com/BertrandTang', '_blank')"><span>Github</span></button><br>
+              <button id="Projets" class="button__nav"
+                onclick="window.location.href ='/projets';"><span>Projets</span></button><br>
+              <button id="Compétences" class="button__nav"
+                onclick="window.location.href = '/skills';"><span>Skills</span></button><br>
+              <button id="CV" class="button__nav"
+                onclick="window.location.href = '/carriere';"><span>Carrière</span></button>
+            </nav>
+          </div>
+          <!-- Flèche de défilement -->
+          <div class="scroll-up-arrow" onclick="scrollToTop()">↑</div>
+        </section>
+  </main>
+  <script src="/js/menu_burger.js"></script>
   <script src="/js/scroll_top.js"></script>
-  <%- include ('partials/matrix') %> 
-  <%- include ('partials/footer') %>
-  </body>
+  <%- include ('partials/matrix') %>
+    <%- include ('partials/footer') %>
+      <script src="/js/resubmit_popup_blocker.js"></script>
+</body>
+
 </html>
