@@ -36,6 +36,7 @@ html {
   margin: auto;
   border: 1px solid #ccc;
   overflow: hidden;
+  font-family: "Quicksand", sans-serif;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #5b595b;
   border: 3px solid #80ab8d;
@@ -81,7 +82,7 @@ html {
   line-height: 1.5rem;
   font-weight: 400;
   font-size: 1.1rem;
-  padding: 0rem 2rem 0rem 2rem;
+  padding: 0rem 1rem 0rem 1rem;
   width: 100%;
   overflow-y: auto;
   height: 100%;
