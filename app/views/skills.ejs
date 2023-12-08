@@ -3,36 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/img/logo/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="/css/skills.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"/>
     <title>Compétences 🛠️</title>
   </head>
 
   <body>
     <main>
-      <a href="/">
-        <img id="logo" src="/img/logo/logo_long.png" alt="">
-      </a>
-      <section id="window__outer">
-        <section class="window">
-          <div class="window-title-bar">
-            <h2 class="window-title">Mes compétences 🛠️</h2>
+        <img id="logo" src="/img/logo_long.png" alt="" onclick="window.location.href ='/';">
+    <section id="window__outer">
+      <section class="window">
+        <div class="window-title-bar">
+            <h1 class="window-title">Mes compétences 🛠️</h1>
             <div class="window-buttons">
-              <a
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                target="_blank"
-                ><button class="window-button maximize"></button
-              ></a>
+              <button class="window-button maximize" onclick="window.open('https://youtu.be/dQw4w9WgXcQ', '_blank')"></button>
               <button class="window-button minimize"></button>
-              <a href="/"><button class="window-button close"></button></a>
+              <button class="window-button close" onclick="window.location.href ='/';"></button>
             </div>
           </div>
           <section class="window-content">
@@ -85,7 +76,6 @@
               <li class="icons" id="unreal_engine"><a href="https://www.unrealengine.com/fr" target="_blank"><img src="/img/logo/unreal_engine.png" alt=""></a></li>
             </ul>
                   <div class="nav">
-              <div class="nav-wrapper">
                 <nav>
                   <button id="Contact" class="button__nav" onclick="window.location.href = '/contact';"><span>Contact</span></button><br>
                   <button id="Linkedin" class="button__nav" onclick="window.open('https://www.linkedin.com/in/bertrandtang/', '_blank')"><span>Linkedin</span></button><br>
@@ -94,7 +84,6 @@
                   <button id="Profil" class="button__nav" onclick="window.location.href = '/profil';"><span>Profil</span></button><br>
                   <button id="CV" class="button__nav" onclick="window.location.href = '/carriere';"><span>Carrière</span></button>
                 </nav>
-              </div>
             </div>
                 <!-- Flèche de défilement -->
   <div class="scroll-up-arrow" onclick="scrollToTop()">↑</div>

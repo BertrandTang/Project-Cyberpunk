@@ -435,7 +435,8 @@ html {
 
 /* Styles du paragraphe d'accueil */
 #message{
-  margin-top: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
   text-align: center;
   padding: 1rem;
 }
@@ -654,8 +655,11 @@ footer {
   }
   .switch {
     width: 170px;
-    height: 110px;
+    height: 115px;
+    padding: 20px;
+    margin: 15px 0px;
     padding: 23px 20px;
+    left: 40%;
   }
   .switch .characters {
     margin-top: 1rem;
@@ -687,7 +691,8 @@ footer {
     font-size: 0.9rem;
   }
   .scroll-up-arrow {
-    right: 8rem;
+    bottom: 5.6rem;
+    right: 8.4rem;
   }
 }
 
@@ -714,8 +719,8 @@ footer {
     font-size: 1.5rem;
   }
   .button__nav {
-    --font-size: 1.75rem;
-    margin: 1.3rem 0rem;
+    --font-size: 2.6rem;
+    margin: 1.1rem 0rem;
   }
   .thumbnail {
     width: 350px;

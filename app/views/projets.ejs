@@ -15,21 +15,15 @@
 
   <body>
     <main>
-      <a href="/">
-        <img id="logo" src="/img/logo_long.png" alt="">
-      </a>
+      <img id="logo" src="/img/logo_long.png" alt="" onclick="window.location.href ='/';">
       <section id="window__outer">
         <section class="window">
           <div class="window-title-bar">
             <h1 class="window-title">Mes projets 🗂️</h1>
-             <div class="window-buttons">
-              <a
-                href="https://youtu.be/dQw4w9WgXcQ"
-                target="_blank"
-                ><button class="window-button maximize"></button
-              ></a>
+            <div class="window-buttons">
+              <button class="window-button maximize" onclick="window.open('https://youtu.be/dQw4w9WgXcQ', '_blank')"></button>
               <button class="window-button minimize"></button>
-              <a href="/"><button class="window-button close"></button></a>
+              <button class="window-button close" onclick="window.location.href ='/';"></button>
             </div>
           </div>
           <section class="window-content">
