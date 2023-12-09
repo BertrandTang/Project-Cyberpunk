@@ -454,12 +454,6 @@ html {
   color: #0dff00;
   padding: 0.5rem 0rem 1rem 0rem;
 }
-.error-message{ /* Message de confirmation de l'envoi du mail réussi*/
-  text-align: center;
-  font-size: 0.8rem;
-  color: #0dff00;
-  padding: 0.5rem 0rem 1rem 0rem;
-}
 .form-container .form .input {
   color: #0dff00;
   width: 100%;
@@ -530,7 +524,7 @@ html {
   color: #363436;
 }
 .honeypot{ /* input invisible pour bait les bots et éviter les spams*/
-  display: block;
+  display: none;
 }
 .send-button, 
 .reset-button{
