@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for project-cyberpunk on 2023-12-09T22:09:14+01:00
+# fly.toml app configuration file generated for bertrandtang on 2023-12-09T22:26:15+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "project-cyberpunk"
+app = "bertrandtang"
 primary_region = "cdg"
 
 [build]
