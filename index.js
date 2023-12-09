@@ -19,14 +19,11 @@ app.use(express.urlencoded({ extended: true }));
 // Traitement du formulaire
 app.post('/contact', (req, res) => {
   const { name, email, message, honeypot} = req.body;
-
-  // Honeypot pour les spams
-  if (honeypot) {
-    // Traitement de spam, ignorez la soumission du formulaire
-    console.log('Tentative de spam détectée');
-    return res.redirect('/contact'); // ou une autre action
+  // Vérification du champ honeypot
+  if (req.body.honeypot !== '') {
+    // Si le champ honeypot est rempli, considérez-le comme un robot
+    return res.status(400).json({ message: 'Nice try mister Bot ! 🤪' });
   }
-
   // Configuration du transporteur de messagerie
   const transporter = nodemailer.createTransport({
       service: 'gmail',

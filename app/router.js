@@ -22,6 +22,7 @@ router.get('/', (req, res) => {
   });
 
   router.get('/contact', (req, res) => {
+    
     // Récupérez la variable de succès depuis la session (ou utilisez une autre méthode de stockage si nécessaire)
   const successMessage = req.session.successMessage;
   
