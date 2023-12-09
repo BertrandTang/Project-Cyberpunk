@@ -60,12 +60,6 @@ app.set('views', 'app/views');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(router);
 
-// Route pour la page d'accueil pour Vercel
-app.get('/', (req, res) => {
-  res.render('home')
-});
-
-
 app.listen(process.env.PORT, () => {
     console.log(`WELCOME TO NIGHT CITY'S http://localhost:${process.env.PORT} `);
   })
