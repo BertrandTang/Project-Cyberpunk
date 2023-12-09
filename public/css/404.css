@@ -17,6 +17,7 @@ html {
   height: 75px;
   position: absolute;
   z-index: 1;
+  cursor: pointer;
 }
 
 /* Styles de la fenêtre interface */

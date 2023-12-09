@@ -61,5 +61,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(router);
 
 app.listen(process.env.PORT, () => {
-    console.log(`WELCOME TO NIGHT CITY'S http://localhost:${process.env.PORT} `);
+    console.log(`YOU'RE LISTENING TO NIGHT CITY'S RADIO FREQUENCE http://localhost:${process.env.PORT} `);
   })
