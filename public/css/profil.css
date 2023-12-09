@@ -541,10 +541,10 @@ footer {
   font-size: 1.1rem;
   text-align: center;
   position: absolute;
-  top: 95%;
+  top: 93%;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: 80%;
 }
 
 /* Développement en Mobile First : Mobile Portrait ⬆️⬆️⬆️*/
