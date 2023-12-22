@@ -475,11 +475,22 @@ html {
 
 /* Styles du paragraphe d'accueil */
 #message {
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 em {
   color: #0dff00;
 }
+
+/* Styles de la div avec les boutons des profils sociaux */
+#socialMedia_profiles{
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding-bottom: 4rem;
+}
+#socialMedia_profiles button{
+  font-size: 1rem;
+} 
 
 /* Styles pour la barre de défilement */
 /* Pour les navigateurs WebKit (comme Chrome et Safari) */
@@ -580,6 +591,17 @@ footer {
     font-size: 1.2rem;
     line-height: 1.6rem;
   }
+  #socialMedia_profiles{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    }
+    #socialMedia_profiles button{
+      padding-bottom: 1rem;
+      font-size: 2.5rem;
+      width: 48%;
+    } 
   .scroll-up-arrow{
     right: 7rem;
   }
@@ -618,6 +640,17 @@ footer {
     font-size: 1.4rem;
     line-height: 1.7rem;
   }
+  #socialMedia_profiles{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    }
+    #socialMedia_profiles button{
+      padding-bottom: 1rem;
+      font-size: 2.5rem;
+      width: 48%;
+    } 
   .scroll-up-arrow {
     bottom: 5.6rem;
     right: 8.4rem;
@@ -656,6 +689,16 @@ footer {
     font-size: 1.4rem;
     line-height: 1.7rem;
   }
+  #socialMedia_profiles{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    }
+    #socialMedia_profiles button{
+      font-size: 1.7rem;
+      width: 24%;
+    } 
   .scroll-up-arrow{
     display: none;
   }
